@@ -70,13 +70,13 @@
     </p>
 
     <p>
-      So he added a third dial setting. Three angles, evenly spaced 60° apart on a clock face. Let's name them:
+      So he added a third dial setting. For the clean counting version, use three directions evenly spaced around a clock face, so that every pair of directions is 120° apart. Let's name them:
     </p>
 
     <ul style="line-height:1.7;">
       <li><span style="color:#c64545;"><strong>A</strong></span> — pointing straight up, at 0°</li>
-      <li><span style="color:#2f8f5b;"><strong>B</strong></span> — pointing 60° clockwise from A</li>
-      <li><span style="color:#2347d9;"><strong>C</strong></span> — pointing another 60° clockwise from B (so 120° from A)</li>
+      <li><span style="color:#2f8f5b;"><strong>B</strong></span> — pointing 120° clockwise from A</li>
+      <li><span style="color:#2347d9;"><strong>C</strong></span> — the remaining direction, 120° from both A and B</li>
     </ul>
 
     <p>
@@ -85,7 +85,7 @@
 
     <figure>
       <svg class="diag" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg">
-        <text x="24" y="28" class="lbl-big">THREE DIRECTIONS, 60° APART</text>
+        <text x="24" y="28" class="lbl-big">THREE DIRECTIONS, 120° APART</text>
         <text x="24" y="44" class="lbl-soft">EACH SCIENTIST CHOOSES ONE OF A, B, OR C INDEPENDENTLY ON EVERY TRIAL</text>
         <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
 
@@ -99,25 +99,25 @@
 
           <line x1="0" y1="0" x2="86.6" y2="50" stroke="#2f8f5b" stroke-width="2.6"/>
           <circle cx="86.6" cy="50" r="5" fill="#2f8f5b"/>
-          <text x="106" y="62" class="lbl-big" style="fill:#2f8f5b;">B · 60°</text>
+          <text x="106" y="62" class="lbl-big" style="fill:#2f8f5b;">B · 120°</text>
 
           <line x1="0" y1="0" x2="-86.6" y2="50" stroke="#2347d9" stroke-width="2.6"/>
           <circle cx="-86.6" cy="50" r="5" fill="#2347d9"/>
-          <text x="-106" y="62" class="lbl-big" style="fill:#2347d9;" text-anchor="end">C · 120°</text>
+          <text x="-106" y="62" class="lbl-big" style="fill:#2347d9;" text-anchor="end">C · 240°</text>
 
           <path d="M 0 -50 A 50 50 0 0 1 43.3 25" stroke="#9ca3af" fill="none" stroke-width="0.8"/>
-          <text x="42" y="-2" class="lbl-soft" text-anchor="middle">60°</text>
+          <text x="42" y="-2" class="lbl-soft" text-anchor="middle">120°</text>
           <path d="M 43.3 25 A 50 50 0 0 1 -43.3 25" stroke="#9ca3af" fill="none" stroke-width="0.8"/>
-          <text x="0" y="40" class="lbl-soft" text-anchor="middle">60°</text>
+          <text x="0" y="40" class="lbl-soft" text-anchor="middle">120°</text>
           <path d="M -43.3 25 A 50 50 0 0 1 0 -50" stroke="#9ca3af" fill="none" stroke-width="0.8"/>
-          <text x="-42" y="-2" class="lbl-soft" text-anchor="middle">60°</text>
+          <text x="-42" y="-2" class="lbl-soft" text-anchor="middle">120°</text>
 
           <circle r="3" class="fill"/>
         </g>
 
         <text x="24" y="345" class="lbl-soft">FIG. 3.1 · THE THREE MEASUREMENT DIRECTIONS</text>
       </svg>
-      <figcaption><span class="figno">FIG. 3.1</span> Three dial settings, evenly spaced. The argument that follows works on any three settings, but the math comes out cleanest when they're 60° apart.</figcaption>
+      <figcaption><span class="figno">FIG. 3.1</span> Three dial settings, evenly spaced around the circle. The argument that follows works on any three settings, but the clean violation comes when every pair is 120° apart.</figcaption>
     </figure>
 
 
@@ -193,7 +193,7 @@
     </div>
 
     <p>
-      Notice what this is. It's not a fact about any <em>specific</em> sealed-envelope theory. It's a fact about <em>all</em> of them, simultaneously, by virtue of arithmetic alone — no matter what rule the envelope uses, no matter what weights the source uses, every theory in this whole family must respect that ceiling. The 2/3 isn't a guess; it falls right out of "at least one of three columns must match its neighbour."
+      Notice what this is. It's not a fact about any <em>specific</em> sealed-envelope theory. It's a fact about <em>all</em> of them, simultaneously, by virtue of arithmetic alone — no matter what rule the envelope uses, no matter what weights the source uses, every theory in this whole family must respect that ceiling. The 2/3 isn't a guess; it falls right out of "at least one of the three column-pairs must match."
     </p>
 
 
@@ -205,20 +205,19 @@
     </p>
 
     <p>
-      With Alice and Bob each picking randomly from {A, B, C}, the angle between their two dials, when they pick differently, is always either 60° or 120°. From the curve:
+      With Alice and Bob each picking randomly from {A, B, C}, the angle between their two directions, when they pick differently, is always 120°. From the curve:
     </p>
 
     <ul style="line-height:1.7;">
-      <li>Dials 60° apart → match rate <strong>25%</strong></li>
       <li>Dials 120° apart → match rate <strong>75%</strong></li>
     </ul>
 
     <p>
-      Hm. The average across all six different-dial combinations comes out to 50%, which is below 67%, so this <em>specific</em> three-dial setup doesn't actually catch the violation. (Bell's original 1964 paper used a slightly different angle configuration that does catch it.)
+      The average across all six different-dial combinations is therefore 75%. That is above the sealed-envelope ceiling of 67%. The simple three-dial setup catches the violation.
     </p>
 
     <p>
-      But hang on — that's an artefact of how I set up the simple version. Bell's <em>argument</em> is general: for the right choice of angles, the experimental match rate exceeds the 2/3 bound. The cleanest modern version, which is what every laboratory experiment actually tests, uses four angles and is called CHSH.
+      Bell's own 1964 paper writes the inequality in a slightly different algebraic form, but the logic is the same: locality plus hidden instructions imposes a bound, and the quantum prediction crosses it. The cleanest modern version uses four angles and is called CHSH.
     </p>
 
 
@@ -226,11 +225,11 @@
     <h2 id="chsh"><span class="num">§3.5</span>The version experimentalists actually use</h2>
 
     <p>
-      In 1969, four physicists — John Clauser, Michael Horne, Abner Shimony, and Richard Holt — re-derived Bell's argument with a small but important tweak. Instead of three dial settings, use four: two for Alice (at 0° and 45°) and two for Bob (at 22.5° and 67.5°). Compute a specific weighted score from the cross-dial correlations, called <em>S</em>.
+      In 1969, four physicists — John Clauser, Michael Horne, Abner Shimony, and Richard Holt — re-derived Bell's argument with a small but important tweak. Instead of three dial settings, use four. In the photon-polarizer version used in many labs, Alice's dials are at 0° and 45°, and Bob's are at 22.5° and 67.5°. Compute a specific weighted score from the cross-dial correlations, called <em>S</em>.
     </p>
 
     <p>
-      The CHSH bound for any sealed-envelope theory: <strong>|S| ≤ 2</strong>. Quantum mechanics, with the angles above, predicts <strong>|S| = 2√2 ≈ 2.83</strong>. The universe, when actually tested in laboratories, gives values right at 2.83 (within experimental error). Roughly 41% above the wall.
+      The CHSH bound for any sealed-envelope theory: <strong>|S| ≤ 2</strong>. Ideal quantum mechanics, with the angles above, predicts <strong>|S| = 2√2 ≈ 2.83</strong>. Real experiments do not always land exactly at the ideal value, because sources and detectors are imperfect, but they do land above 2 in the way quantum mechanics predicts. The ideal violation is roughly 41% above the wall.
     </p>
 
     <figure>
@@ -262,23 +261,23 @@
           <text x="0" y="112" class="lbl-soft">at the angles shown</text>
 
           <text x="0" y="160" class="lbl-big" style="fill:#c64545;">≈ 41% PAST THE WALL</text>
-          <text x="0" y="176" class="lbl-soft" style="fill:#c64545;">and that's what experiments actually measure</text>
+          <text x="0" y="176" class="lbl-soft" style="fill:#c64545;">real tests land above the wall</text>
         </g>
 
         <text x="24" y="305" class="lbl-soft">FIG. 3.3 · CHSH CONFIGURATION AND THE BOUND VIOLATION</text>
       </svg>
-      <figcaption><span class="figno">FIG. 3.3</span> The CHSH form of Bell's argument, the one every real-world Bell test has used since 1972. Same logic as the three-dial version, slightly different bookkeeping; the numbers come out cleaner.</figcaption>
+      <figcaption><span class="figno">FIG. 3.3</span> The CHSH form of Bell's argument, one of the standard forms behind real-world Bell tests. Same logic as the three-dial version, slightly different bookkeeping; the numbers come out cleaner.</figcaption>
     </figure>
 
     <div class="callout">
       <span class="tag">The bottom line</span>
       <p>
-        It doesn't really matter which version of Bell's argument you use — three dials, four dials, six dials, whatever angles you like. Bell's argument has been re-derived dozens of times over the past sixty years. <em>Every</em> version has the same shape: an upper bound that any sealed-envelope theory must respect, and a quantum-mechanical prediction that breezes through it. When experimentalists actually built the apparatus, they found the universe sides with quantum mechanics every single time.
+        It doesn't really matter which version of Bell's argument you use — three dials, four dials, six dials, with suitable angle choices. Bell's argument has been re-derived dozens of times over the past sixty years. <em>Every</em> version has the same shape: an upper bound that any sealed-envelope theory must respect, and a quantum-mechanical prediction that breezes through it. When experimentalists actually built the apparatus, they found the universe sides with quantum mechanics.
       </p>
     </div>
 
     <p>
-      The puzzle is solved, but the answer is unsettling. The sealed envelope cannot exist. Some other story has to be true.
+      The puzzle is solved, but the answer is unsettling. The local sealed envelope cannot exist. Some other story has to be true.
     </p>
 
 
