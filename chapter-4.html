@@ -38,11 +38,13 @@
   <aside class="toc">
     <h3>Chapter 4</h3>
     <ol style="counter-reset: none;">
+      <li style="counter-increment: none;"><a href="#two-stories">Back to the two stories</a></li>
       <li style="counter-increment: none;"><a href="#nonlocal">The universe is non-local</a></li>
       <li style="counter-increment: none;"><a href="#no-signal">But you can't send messages</a></li>
-      <li style="counter-increment: none;"><a href="#experiments">Experiments</a></li>
+      <li style="counter-increment: none;"><a href="#experiments">Sixty years of experiments</a></li>
       <li style="counter-increment: none;"><a href="#nobel">The 2022 Nobel Prize</a></li>
-      <li style="counter-increment: none;"><a href="#open">Open questions</a></li>
+      <li style="counter-increment: none;"><a href="#open">What's still open</a></li>
+      <li style="counter-increment: none;"><a href="#next">Where to read next</a></li>
     </ol>
     <h3 style="margin-top:24px;">Other chapters</h3>
     <ol>
@@ -58,40 +60,60 @@
 
     <h1><span class="num">CHAPTER 4</span>What it means</h1>
     <p class="deck">
-      Einstein lost. Locality is incompatible with experiment. The universe correlates particles across space without sending signals. Three physicists won the 2022 Nobel Prize for proving it.
+      In which the boring story dies, the universe turns out to be stranger than Einstein could accept, and three experimentalists win the Nobel Prize for proving it.
     </p>
 
 
-    <!-- ============== §4.1 NONLOCAL ============== -->
-    <h2 id="nonlocal"><span class="num">§4.1</span>The universe is non-local</h2>
+    <!-- ============== §4.1 TWO STORIES ============== -->
+    <h2 id="two-stories"><span class="num">§4.1</span>Back to the two stories</h2>
 
     <p>
-      Bell's argument is a logical wedge. Either:
+      Remember the two stories from chapter 1?
     </p>
 
     <ol style="line-height:1.7;">
-      <li>Every particle carries pre-decided answers and what happens at one detector cannot influence the other (local hidden variables) — in which case Bell's bound holds, and the experiment will respect it.</li>
-      <li>The above is false.</li>
+      <li><strong>The boring story.</strong> Each particle leaves the source with sealed instructions that determine its answer at every dial setting. No signals cross between Alice and Bob. The "instant correlation" is just a shared origin showing up at both ends.</li>
+      <li><strong>The spooky story.</strong> When Alice measures her particle, something — some influence, some non-local connection — somehow reaches across the gap and affects what Bob's particle does. Faster than light, if necessary.</li>
     </ol>
 
     <p>
-      The experiment shows the bound is violated. So option 1 is false — and the question is which part of it has to give.
+      Bell's argument is essentially a logical wedge between these two. Either the boring story is right, in which case the experiment must respect his bound. Or the boring story is wrong. Experiment violates the bound. Therefore: the boring story is wrong.
     </p>
 
     <p>
-      The mainstream conclusion is that <strong>locality fails</strong>: distant particles, when entangled, are not independent in the way two gloves in two boxes are independent. They are part of a single, indivisible quantum state, and a measurement on one of them genuinely fixes information about the other — instantaneously, no matter the distance. This is the "spooky action at a distance" Einstein dismissed. He was wrong to dismiss it.
+      That sentence took thirty years to write down rigorously, and another thirty years to actually test in a laboratory tight enough to be unambiguous. But it's the entire content of Bell's theorem, and it's the reason the next sentence has to be uncomfortable.
     </p>
 
 
-    <!-- ============== §4.2 NO SIGNAL ============== -->
-    <h2 id="no-signal"><span class="num">§4.2</span>But you can't send messages</h2>
+    <!-- ============== §4.2 NONLOCAL ============== -->
+    <h2 id="nonlocal"><span class="num">§4.2</span>The universe is non-local</h2>
 
     <p>
-      The natural worry: if Alice's measurement instantaneously affects what Bob's particle does, can she use the entangled pair as a faster-than-light telephone? The answer is <strong>no</strong>, and this is one of the most subtle features of the whole story.
+      The boring story can't be how nature works. Some part of it has to give. The mainstream conclusion — and the one almost every working physicist now accepts — is that the part that gives is the <strong>locality</strong> assumption.
     </p>
 
     <p>
-      Look at Bob's notebook in isolation. Bob's flashes come up ▲ and ▼ in roughly equal numbers, regardless of what Alice does. He cannot tell, from his data alone, whether Alice has even turned on her apparatus. The "non-local" effect only appears when Alice and Bob meet up later and <em>compare</em> their notebooks. Comparison requires bringing the notebooks together, which requires moving them at sub-light speed.
+      That is: distant entangled particles are <em>not</em> independent in the way two gloves in two boxes are independent. They are part of a single, indivisible quantum thing. When Alice measures her particle, the joint state really does change at Bob's end too — instantly, no matter how far apart they are. This is the "spooky action at a distance" Einstein dismissed. He was wrong to dismiss it.
+    </p>
+
+    <p>
+      Take a moment to feel how strange that is. The two particles can be on opposite sides of the galaxy. Light couldn't cross between them in millions of years. And yet the moment Alice measures hers, some piece of the joint state at Bob's end is fixed. The universe, in the very deepest sense, does not factor neatly into independent local pieces. Whatever reality "is," it isn't built out of strictly local parts.
+    </p>
+
+
+    <!-- ============== §4.3 NO SIGNAL ============== -->
+    <h2 id="no-signal"><span class="num">§4.3</span>But you can't send messages</h2>
+
+    <p>
+      The natural worry: if Alice's measurement instantaneously affects Bob's particle, surely she can use the entangled pair as a faster-than-light telephone? Just wiggle her dial in some pattern; whatever non-local thing reaches Bob's end conveys her message.
+    </p>
+
+    <p>
+      The answer is <strong>no</strong>, and this is one of the most subtle features of the whole story.
+    </p>
+
+    <p>
+      Look at Bob's notebook in isolation, before he meets Alice to compare. His flashes come up ▲ and ▼ in roughly equal numbers, with no detectable pattern, regardless of what Alice has been doing on the other side. He cannot tell, from his data alone, whether Alice has even turned her apparatus on. The "non-local" effect appears <em>only</em> when Alice and Bob meet up later and lay their notebooks side by side. And meeting up requires moving the notebooks, which can only happen at sub-light speed.
     </p>
 
     <figure>
@@ -102,23 +124,19 @@
           </marker>
         </defs>
 
-        <text x="24" y="28" class="lbl-big">NO FASTER-THAN-LIGHT SIGNALLING</text>
-        <text x="24" y="44" class="lbl-soft">EACH NOTEBOOK ALONE LOOKS LIKE A FAIR COIN; THE CORRELATION ONLY APPEARS WHEN COMPARED</text>
+        <text x="24" y="28" class="lbl-big">EACH NOTEBOOK ALONE LOOKS LIKE A FAIR COIN</text>
+        <text x="24" y="44" class="lbl-soft">THE CORRELATION ONLY APPEARS WHEN YOU PUT THEM SIDE BY SIDE — AND THAT REQUIRES SUB-LIGHT TRAVEL</text>
         <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
 
-        <!-- alice's notebook -->
         <g transform="translate(80,100)">
           <rect x="0" y="0" width="280" height="160" class="stroke-2 fill-soft" rx="4"/>
           <text x="140" y="-10" class="lbl-big" text-anchor="middle">ALICE'S NOTEBOOK</text>
-          <!-- columns of flashes -->
           <text x="20" y="30" class="body">▲ ▼ ▲ ▼ ▲ ▼ ▼ ▲ ▼ ▲ ▲ ▼</text>
           <text x="20" y="58" class="body">▼ ▲ ▼ ▲ ▼ ▲ ▲ ▼ ▲ ▼ ▼ ▲</text>
           <text x="20" y="86" class="body">▲ ▼ ▼ ▲ ▼ ▼ ▲ ▼ ▲ ▼ ▲ ▼</text>
           <text x="140" y="130" class="lbl-soft" text-anchor="middle">looks like a fair coin</text>
-          <text x="140" y="146" class="lbl-soft" text-anchor="middle">no useful pattern</text>
         </g>
 
-        <!-- bob's notebook -->
         <g transform="translate(520,100)">
           <rect x="0" y="0" width="280" height="160" class="stroke-2 fill-soft" rx="4"/>
           <text x="140" y="-10" class="lbl-big" text-anchor="middle">BOB'S NOTEBOOK</text>
@@ -126,29 +144,31 @@
           <text x="20" y="58" class="body">▲ ▼ ▲ ▼ ▲ ▼ ▼ ▲ ▼ ▲ ▲ ▼</text>
           <text x="20" y="86" class="body">▼ ▲ ▲ ▼ ▲ ▲ ▼ ▲ ▼ ▲ ▼ ▲</text>
           <text x="140" y="130" class="lbl-soft" text-anchor="middle">also looks like a fair coin</text>
-          <text x="140" y="146" class="lbl-soft" text-anchor="middle">no useful pattern</text>
         </g>
 
-        <!-- center compare arrow -->
         <line x1="370" y1="180" x2="510" y2="180" class="stroke" stroke-dasharray="3 3"/>
         <text x="440" y="170" class="lbl" text-anchor="middle">compare later</text>
         <text x="440" y="200" class="lbl-soft" text-anchor="middle" style="fill:#2347d9;">only then does the pattern appear</text>
 
-        <text x="24" y="305" class="lbl-soft">FIG. 4.1 · TWO INDEPENDENT-LOOKING SEQUENCES THAT ARE SECRETLY CORRELATED</text>
+        <text x="24" y="305" class="lbl-soft">FIG. 4.1 · TWO INDEPENDENT-LOOKING SEQUENCES, SECRETLY CORRELATED</text>
       </svg>
-      <figcaption><span class="figno">FIG. 4.1</span> Each scientist's data, taken alone, is statistically random. The correlation lives in the <em>relationship</em> between the two notebooks, not in either notebook by itself. So no information can be extracted by looking at just one side — which is exactly why entanglement does not let you signal faster than light.</figcaption>
+      <figcaption><span class="figno">FIG. 4.1</span> Each scientist's data, taken alone, is statistically random. The correlation lives in the <em>relationship</em> between the two notebooks, not in either notebook on its own.</figcaption>
     </figure>
 
     <p>
-      So we have something genuinely strange: a real, measurable correlation that travels between two places without any signal physically passing between them, and which simultaneously <em>cannot be used</em> to send any information. The universe seems to have been designed with the strictest possible no-signalling rule baked in — but with non-locality intact underneath.
+      So we have something genuinely strange: a real, measurable, non-local correlation that <em>cannot</em> be used to send a signal. The universe seems to have been carefully arranged so that the strict no-faster-than-light rule of special relativity stays intact at the level of <em>information</em>, even though something underneath is doing things in a non-local way at the level of <em>state</em>. Most physicists find this beautiful. Others find it frustrating. Almost everyone finds it strange.
     </p>
 
 
-    <!-- ============== §4.3 EXPERIMENTS ============== -->
-    <h2 id="experiments"><span class="num">§4.3</span>The experimental record</h2>
+    <!-- ============== §4.4 EXPERIMENTS ============== -->
+    <h2 id="experiments"><span class="num">§4.4</span>Sixty years of experiments</h2>
 
     <p>
-      Bell's 1964 paper was for years considered a curiosity — it showed that <em>some</em> testable difference existed, but actually building the apparatus was hard. The first attempts came in the 1970s. The history goes roughly:
+      For most of the 1960s and 70s, Bell's paper was treated as a curiosity. The physics establishment had moved on; quantum mechanics worked, and quibbles about its interpretation were filed under "philosophy." Then in 1972, an unsung young Berkeley physicist named John Clauser actually built the apparatus and did the experiment. The result agreed with quantum mechanics; Bell's bound was violated.
+    </p>
+
+    <p>
+      The experimental work that followed is one of the great slow-burn stories in 20th-century physics. Each round of experiment closed off some specific way the previous result might have been a fluke — what experimentalists call a "loophole." Maybe the dial settings were correlated with the source somehow? Maybe inefficient detectors were biased toward the matching pairs? Each loophole got plugged. The verdict, after every closure, was the same: Bell was right.
     </p>
 
     <figure>
@@ -157,9 +177,7 @@
         <text x="24" y="44" class="lbl-soft">EACH TEST CLOSED A POSSIBLE LOOPHOLE THE PREVIOUS ONE LEFT OPEN</text>
         <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
 
-        <!-- timeline -->
         <line x1="80" y1="180" x2="800" y2="180" class="stroke-2"/>
-        <!-- year ticks -->
         <line x1="120" y1="174" x2="120" y2="186" class="stroke"/>
         <line x1="280" y1="174" x2="280" y2="186" class="stroke"/>
         <line x1="440" y1="174" x2="440" y2="186" class="stroke"/>
@@ -171,11 +189,10 @@
         <text x="600" y="208" class="lbl-soft" text-anchor="middle">1998</text>
         <text x="760" y="208" class="lbl-soft" text-anchor="middle">2015</text>
 
-        <!-- events -->
         <g transform="translate(120,80)">
           <circle r="6" class="fill"/>
           <text x="0" y="-10" class="lbl" text-anchor="middle">BELL</text>
-          <text x="0" y="-26" class="lbl-soft" text-anchor="middle">theorem</text>
+          <text x="0" y="-26" class="lbl-soft" text-anchor="middle">writes the paper</text>
         </g>
         <g transform="translate(280,80)">
           <circle r="6" class="fill"/>
@@ -185,12 +202,12 @@
         <g transform="translate(440,80)">
           <circle r="6" class="fill"/>
           <text x="0" y="-10" class="lbl" text-anchor="middle">ASPECT</text>
-          <text x="0" y="-26" class="lbl-soft" text-anchor="middle">switched dials</text>
+          <text x="0" y="-26" class="lbl-soft" text-anchor="middle">switches dials mid-flight</text>
         </g>
         <g transform="translate(600,80)">
           <circle r="6" class="fill"/>
           <text x="0" y="-10" class="lbl" text-anchor="middle">ZEILINGER</text>
-          <text x="0" y="-26" class="lbl-soft" text-anchor="middle">long-distance</text>
+          <text x="0" y="-26" class="lbl-soft" text-anchor="middle">long-distance tests</text>
         </g>
         <g transform="translate(760,80)">
           <circle r="6" class="fill"/>
@@ -198,53 +215,71 @@
           <text x="0" y="-26" class="lbl-soft" text-anchor="middle">Hensen et al.</text>
         </g>
 
-        <!-- result label -->
         <text x="440" y="260" class="lbl" text-anchor="middle" style="fill:#2347d9;">EVERY EXPERIMENT FOUND THE BELL BOUND VIOLATED, EXACTLY AS QM PREDICTS</text>
-
-        <text x="24" y="265" class="lbl-soft">FIG. 4.2 · TIMELINE</text>
       </svg>
+      <figcaption><span class="figno">FIG. 4.2</span> A timeline of the increasingly tight experimental tests. Each one ruled out some specific way the previous result might have been an artefact. The final 2015 experiment — performed independently by three groups — closed every imaginable loophole simultaneously.</figcaption>
     </figure>
 
     <p>
-      Each experiment closed a possible "loophole" — a way the result might still be explainable by hidden variables, perhaps with some tricky timing or detection-efficiency excuse. By 2015, three independent groups had run "loophole-free" Bell tests where every imaginable hidden-variable escape was ruled out. The verdict was the same every time: the Bell bound is violated, and quantum mechanics is exactly right.
-    </p>
-
-
-    <!-- ============== §4.4 NOBEL ============== -->
-    <h2 id="nobel"><span class="num">§4.4</span>The 2022 Nobel Prize</h2>
-
-    <p>
-      In 2022, the Nobel Committee for Physics awarded the prize jointly to <strong>Alain Aspect</strong>, <strong>John F. Clauser</strong>, and <strong>Anton Zeilinger</strong> "for experiments with entangled photons, establishing the violation of Bell inequalities and pioneering quantum information science."
+      Aspect's 1982 work was the most cinematic. He arranged for the dial settings to be switched <em>after</em> the particles were already in flight — fast enough that no signal travelling at the speed of light could have reached the source in time to influence what the particles "knew." The bound was still violated. Whatever's going on, the particles aren't checking with each other before answering.
     </p>
 
     <p>
-      Notice what the Nobel committee chose to honour. Not Bell — he died in 1990 and the Nobel is not awarded posthumously. Not the theorists who refined the inequalities. The <em>experimentalists</em>, who took Bell's mathematical statement and showed empirically that the universe really is non-local. The award marked the moment when the physics community formally agreed that this is not philosophy but fact.
+      By 2015, three groups (in Delft, Vienna, and at NIST in Boulder) had independently performed "loophole-free" Bell tests, eliminating every imaginable escape route at once. The verdict was unambiguous and final.
     </p>
 
 
-    <!-- ============== §4.5 OPEN ============== -->
-    <h2 id="open"><span class="num">§4.5</span>What's still open</h2>
+    <!-- ============== §4.5 NOBEL ============== -->
+    <h2 id="nobel"><span class="num">§4.5</span>The 2022 Nobel Prize</h2>
 
     <p>
-      Bell's theorem closes a particular question: <em>can a local theory with hidden variables reproduce quantum mechanics?</em> No. But it does not close every conceivable retreat. A few escape routes are still seriously discussed:
+      In October 2022, the Royal Swedish Academy of Sciences awarded the Nobel Prize in Physics jointly to <strong>Alain Aspect</strong>, <strong>John F. Clauser</strong>, and <strong>Anton Zeilinger</strong> "for experiments with entangled photons, establishing the violation of Bell inequalities and pioneering quantum information science."
+    </p>
+
+    <p>
+      Notice who they chose. Not the theorists who proved the inequalities; <em>experimentalists</em>, who did the real-world tests. Bell himself died in 1990 of a stroke, and the Nobel is not awarded posthumously. The award marked the moment when the physics community formally agreed that the strangeness Bell had identified is no longer a philosophical curiosity but an established empirical fact about the universe.
+    </p>
+
+    <p>
+      It also marked the moment when "quantum information" — the field that tries to <em>use</em> non-local quantum correlations for things like quantum cryptography and quantum computing — graduated from speculative to mainstream. The same correlations that worried Einstein are now being commercialised.
+    </p>
+
+
+    <!-- ============== §4.6 OPEN ============== -->
+    <h2 id="open"><span class="num">§4.6</span>What's still open</h2>
+
+    <p>
+      Bell's theorem closes one specific question: can a local theory with hidden variables reproduce quantum mechanics? No. But it doesn't end every conceivable retreat. A few escape routes are still seriously discussed by people who don't want to accept non-locality:
     </p>
 
     <ul style="line-height:1.7;">
-      <li><strong>Superdeterminism.</strong> What if the dial settings Alice and Bob choose are not really free — what if they are correlated with the source's hidden variables, going all the way back to the Big Bang? Then a hidden-variable theory <em>can</em> reproduce quantum mechanics. This option is logically possible but most physicists find it deeply unappealing because it sacrifices experimental science as a meaningful activity.</li>
-      <li><strong>Many-worlds.</strong> If every measurement outcome happens in a different "branch" of reality, then there is no single fact of "what flashed in Alice's box" until the branches are reconciled by interaction. Locality is restored at the cost of accepting that the wave function describes literally everything that exists.</li>
-      <li><strong>QBism / participatory realism.</strong> Reject the idea that quantum states describe the world; treat them as descriptions of the experimenter's beliefs. The "non-local" correlation becomes a fact about coordinated belief, not coordinated reality. Hard to formalise; small but persistent following.</li>
+      <li><strong>Superdeterminism.</strong> What if the dial settings Alice and Bob "choose" are not actually free? What if every measurement choice in the universe is correlated with everything else, going all the way back to the Big Bang? Then a hidden-variable theory <em>can</em> reproduce quantum mechanics — but only by abandoning the assumption that scientists can choose their experiments freely. Most physicists find this option deeply unappealing, since it makes experimental science itself look like an illusion. But it's logically consistent.</li>
+      <li><strong>Many-worlds.</strong> Maybe every measurement outcome <em>does</em> happen — just in different "branches" of the universe. There's no single fact about "what Alice's flash was" until the branches eventually interact and reconcile. Locality is preserved at the cost of believing that every quantum outcome creates a copy of you watching it. Surprising number of physicists take this seriously.</li>
+      <li><strong>QBism / participatory interpretations.</strong> Reject the idea that quantum states describe the world at all; treat them as descriptions of an experimenter's information. The "non-local correlation" becomes a fact about coordinated knowledge, not coordinated reality. Hard to formalise, small but persistent following.</li>
     </ul>
 
     <p>
-      The mainstream consensus, after sixty years, is that the universe is non-local in a precise and limited sense; the "spooky action at a distance" is real but cannot be exploited; and the philosophical mess that remains is the price of having a quantum theory at all. Bell's contribution was not to settle the philosophy. It was to show, definitively, that the philosophy could no longer be ignored.
+      The mainstream consensus, after sixty years, is roughly this: the universe is non-local in a precise and limited sense; the non-locality cannot be exploited to send messages; and the philosophical mess that remains is the price you pay for having a theory as predictively successful as quantum mechanics. Bell's contribution was not to settle the philosophy — it was to show, definitively, that the philosophy could no longer be ignored.
     </p>
 
-    <div class="callout">
-      <span class="tag">Where to go next</span>
-      <p>
-        If you want to keep going on quantum, the natural next reads are: <strong>Mermin's "Bringing Home the Atomic World"</strong> (a wonderful 1981 popularisation of exactly this experiment), <strong>Susskind's <em>Theoretical Minimum: Quantum Mechanics</em></strong> (a gentle introduction with just enough math), and <strong>Preskill's lecture notes on quantum computation</strong> (free online, essential for the application side). For experimental philosophy, <strong>Tim Maudlin's <em>Quantum Non-Locality and Relativity</em></strong> is the deepest book on what Bell's theorem actually says about the universe.
-      </p>
-    </div>
+
+    <!-- ============== §4.7 NEXT ============== -->
+    <h2 id="next"><span class="num">§4.7</span>Where to read next</h2>
+
+    <p>
+      If you've stayed with us this far, here are some good next steps:
+    </p>
+
+    <ul style="line-height:1.7;">
+      <li><strong>David Mermin, "Bringing Home the Atomic World" (1981).</strong> A short, elegant popularisation of exactly the experiment we've just walked through. Mermin invents a board-game version of the Bell experiment that captures the strangeness with no math at all. It's the gentlest possible introduction. Try to find the <em>Physics Today</em> reprint.</li>
+      <li><strong>Leonard Susskind, <em>Quantum Mechanics: The Theoretical Minimum</em>.</strong> A textbook for non-physicists who want to actually learn the math, but presented patiently from scratch. About 350 pages, takes maybe a month at a relaxed pace, and ends with you genuinely understanding entanglement.</li>
+      <li><strong>Sean Carroll, <em>Something Deeply Hidden</em>.</strong> A clear, opinionated book defending the many-worlds interpretation. Whether or not you end up agreeing with him, it's a great way to think more carefully about what Bell's theorem leaves open.</li>
+      <li><strong>Tim Maudlin, <em>Quantum Non-Locality and Relativity</em>.</strong> The serious philosophical book on what Bell's theorem actually says about the universe. Harder than the others; aimed at people who want to dig.</li>
+    </ul>
+
+    <p>
+      Sixty years after Bell wrote his six pages, you're a member of the first generation that's allowed to take their conclusions for granted. The universe is non-local. Entanglement is a real, measurable, non-classical resource. The dispute Einstein and Bohr could only argue about is now a routine experimental fact. That's worth knowing.
+    </p>
 
 
     <div class="pagenav">

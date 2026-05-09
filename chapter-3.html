@@ -38,9 +38,11 @@
   <aside class="toc">
     <h3>Chapter 3</h3>
     <ol style="counter-reset: none;">
-      <li style="counter-increment: none;"><a href="#three-dials">Three dial settings</a></li>
-      <li style="counter-increment: none;"><a href="#counting">Counting matches</a></li>
-      <li style="counter-increment: none;"><a href="#breaking">Where the universe breaks the rule</a></li>
+      <li style="counter-increment: none;"><a href="#three">Bell's idea — use three dials</a></li>
+      <li style="counter-increment: none;"><a href="#sheets">The eight possible envelopes</a></li>
+      <li style="counter-increment: none;"><a href="#bound">The counting argument</a></li>
+      <li style="counter-increment: none;"><a href="#qm">What the universe actually does</a></li>
+      <li style="counter-increment: none;"><a href="#chsh">The version experimentalists actually use</a></li>
     </ol>
     <h3 style="margin-top:24px;">Other chapters</h3>
     <ol>
@@ -56,48 +58,53 @@
 
     <h1><span class="num">CHAPTER 3</span>The clever experiment</h1>
     <p class="deck">
-      Bell's idea: instead of using two dial settings, use three. There's a counting argument that any sealed-envelope theory has to obey — and the universe, as a matter of fact, doesn't.
+      In which Bell asks one extra question, counts very carefully, and discovers a wall that every sealed-envelope theory in the universe has to obey — but that the universe itself does not.
     </p>
 
 
-    <!-- ============== §3.1 THREE DIALS ============== -->
-    <h2 id="three-dials"><span class="num">§3.1</span>Three dial settings</h2>
+    <!-- ============== §3.1 THREE ============== -->
+    <h2 id="three"><span class="num">§3.1</span>Bell's idea — use three dials</h2>
 
     <p>
-      Bell's key insight is that asking "do they match?" with just two dial settings (Alice's and Bob's) doesn't give you enough information to catch a sealed-envelope theory cheating. You need <strong>three</strong> directions in the picture, and you need to count carefully.
+      Here's where Bell's small genius shows up. He noticed that asking "do they match?" with only two dials — Alice's and Bob's — never quite catches a clever sealed-envelope theory cheating. With only two angles in play, there's always enough wiggle room to invent a hidden rule that fits.
     </p>
 
     <p>
-      So pick three angles, evenly spaced. Let's call them <span style="color:#c64545;"><strong>A = 0°</strong></span>, <span style="color:#2f8f5b;"><strong>B = 60°</strong></span>, and <span style="color:#2347d9;"><strong>C = 120°</strong></span>. On every trial, Alice randomly picks one of these three for her dial, and Bob independently does the same.
+      So he added a third dial setting. Three angles, evenly spaced 60° apart on a clock face. Let's name them:
+    </p>
+
+    <ul style="line-height:1.7;">
+      <li><span style="color:#c64545;"><strong>A</strong></span> — pointing straight up, at 0°</li>
+      <li><span style="color:#2f8f5b;"><strong>B</strong></span> — pointing 60° clockwise from A</li>
+      <li><span style="color:#2347d9;"><strong>C</strong></span> — pointing another 60° clockwise from B (so 120° from A)</li>
+    </ul>
+
+    <p>
+      On every trial, Alice picks one of these three for her dial. Bob, independently, also picks one of these three. Each writes down their choice and their flash. After many thousands of trials they have two big tables, with three possible dial settings on each side.
     </p>
 
     <figure>
       <svg class="diag" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg">
-        <text x="24" y="28" class="lbl-big">THREE DIAL DIRECTIONS, 60° APART</text>
+        <text x="24" y="28" class="lbl-big">THREE DIRECTIONS, 60° APART</text>
         <text x="24" y="44" class="lbl-soft">EACH SCIENTIST CHOOSES ONE OF A, B, OR C INDEPENDENTLY ON EVERY TRIAL</text>
         <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
 
-        <!-- the three direction arrows on a clock face -->
         <g transform="translate(440,200)">
           <circle r="110" class="stroke-2" fill="#fff"/>
           <circle r="108" stroke="#cfd5e8" fill="none" stroke-dasharray="2 4"/>
 
-          <!-- direction A: pointing up (0°) -->
           <line x1="0" y1="0" x2="0" y2="-100" stroke="#c64545" stroke-width="2.6"/>
           <circle cx="0" cy="-100" r="5" fill="#c64545"/>
           <text x="0" y="-118" class="lbl-big" text-anchor="middle" style="fill:#c64545;">A · 0°</text>
 
-          <!-- direction B: 60° clockwise from A → 60° to the right of vertical -->
           <line x1="0" y1="0" x2="86.6" y2="50" stroke="#2f8f5b" stroke-width="2.6"/>
           <circle cx="86.6" cy="50" r="5" fill="#2f8f5b"/>
           <text x="106" y="62" class="lbl-big" style="fill:#2f8f5b;">B · 60°</text>
 
-          <!-- direction C: 120° clockwise from A → -60° from B, i.e. 60° to the left below horizontal -->
           <line x1="0" y1="0" x2="-86.6" y2="50" stroke="#2347d9" stroke-width="2.6"/>
           <circle cx="-86.6" cy="50" r="5" fill="#2347d9"/>
           <text x="-106" y="62" class="lbl-big" style="fill:#2347d9;" text-anchor="end">C · 120°</text>
 
-          <!-- 60° labels on arcs -->
           <path d="M 0 -50 A 50 50 0 0 1 43.3 25" stroke="#9ca3af" fill="none" stroke-width="0.8"/>
           <text x="42" y="-2" class="lbl-soft" text-anchor="middle">60°</text>
           <path d="M 43.3 25 A 50 50 0 0 1 -43.3 25" stroke="#9ca3af" fill="none" stroke-width="0.8"/>
@@ -110,234 +117,169 @@
 
         <text x="24" y="345" class="lbl-soft">FIG. 3.1 · THE THREE MEASUREMENT DIRECTIONS</text>
       </svg>
-      <figcaption><span class="figno">FIG. 3.1</span> Three directions, evenly spaced at 60° apart on a clock face. These are the only dial settings either scientist will use. The rest of the chapter is about what their notebooks will look like after thousands of trials.</figcaption>
+      <figcaption><span class="figno">FIG. 3.1</span> Three dial settings, evenly spaced. The argument that follows works on any three settings, but the math comes out cleanest when they're 60° apart.</figcaption>
     </figure>
 
+
+    <!-- ============== §3.2 SHEETS ============== -->
+    <h2 id="sheets"><span class="num">§3.2</span>The eight possible envelopes</h2>
+
     <p>
-      For each trial, Alice writes down which direction she picked (A, B, or C) and what her light flashed (▲ or ▼). Bob does the same. After many trials, they have two long tables.
+      Now suppose, for the sake of argument, that the sealed-envelope explanation is right. Each particle leaves the source carrying a complete instruction sheet: what to flash if the dial is at A, what to flash if at B, what to flash if at C. Three boxes to fill in, each containing either ▲ or ▼.
     </p>
 
-
-    <!-- ============== §3.2 COUNTING ============== -->
-    <h2 id="counting"><span class="num">§3.2</span>The counting argument</h2>
-
     <p>
-      Now imagine, for a moment, that the sealed-envelope explanation is correct. Each particle pair leaves the source carrying complete instructions: a triple specifying what the particle would do at each of the three possible dial settings. There are <strong>only eight</strong> such triples — every cell is either ▲ or ▼, three cells per particle.
+      How many possible sheets are there? Well — three boxes, each with two choices, so 2 × 2 × 2 = <strong>eight</strong> possible sheets, listed below. (Alice's sheet says one thing; Bob's, by the same anti-correlation rule we saw in chapter 1, says the exact opposite of Alice's at every angle.)
     </p>
 
     <figure>
-      <svg class="diag" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg">
-        <text x="24" y="28" class="lbl-big">THE EIGHT POSSIBLE INSTRUCTION SHEETS A PARTICLE COULD CARRY</text>
-        <text x="24" y="44" class="lbl-soft">REMEMBER: BOB'S PARTICLE CARRIES THE OPPOSITE OF EACH ENTRY (THAT'S WHY MATCHING DIALS GIVE OPPOSITE FLASHES)</text>
+      <svg class="diag" viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg">
+        <text x="24" y="28" class="lbl-big">EVERY POSSIBLE INSTRUCTION SHEET ALICE'S PARTICLE COULD CARRY</text>
+        <text x="24" y="44" class="lbl-soft">BOB'S SHEET IS ALWAYS THE OPPOSITE OF ALICE'S — THAT'S WHY SAME-DIAL TRIALS ALWAYS GIVE OPPOSITE FLASHES</text>
         <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
 
-        <!-- header -->
         <g transform="translate(0,90)">
           <text x="80" y="0" class="lbl">SHEET</text>
-          <text x="220" y="0" class="lbl" style="fill:#c64545;" text-anchor="middle">A · 0°</text>
-          <text x="320" y="0" class="lbl" style="fill:#2f8f5b;" text-anchor="middle">B · 60°</text>
-          <text x="420" y="0" class="lbl" style="fill:#2347d9;" text-anchor="middle">C · 120°</text>
+          <text x="220" y="0" class="lbl" style="fill:#c64545;" text-anchor="middle">A</text>
+          <text x="320" y="0" class="lbl" style="fill:#2f8f5b;" text-anchor="middle">B</text>
+          <text x="420" y="0" class="lbl" style="fill:#2347d9;" text-anchor="middle">C</text>
           <text x="600" y="0" class="lbl">SHEET</text>
-          <text x="700" y="0" class="lbl" style="fill:#c64545;" text-anchor="middle">A · 0°</text>
-          <text x="780" y="0" class="lbl" style="fill:#2f8f5b;" text-anchor="middle">B · 60°</text>
-          <text x="848" y="0" class="lbl" style="fill:#2347d9;" text-anchor="middle">C · 120°</text>
+          <text x="700" y="0" class="lbl" style="fill:#c64545;" text-anchor="middle">A</text>
+          <text x="780" y="0" class="lbl" style="fill:#2f8f5b;" text-anchor="middle">B</text>
+          <text x="848" y="0" class="lbl" style="fill:#2347d9;" text-anchor="middle">C</text>
         </g>
         <line x1="40" y1="100" x2="856" y2="100" class="stroke-soft"/>
 
-        <!-- 8 rows in two columns -->
-        <g transform="translate(0,128)">
-          <text x="80" y="0" class="body">1</text>
-          <text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="320" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="420" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-
-          <text x="600" y="0" class="body">5</text>
-          <text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="780" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="848" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-        </g>
-        <g transform="translate(0,156)">
-          <text x="80" y="0" class="body">2</text>
-          <text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="320" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="420" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-
-          <text x="600" y="0" class="body">6</text>
-          <text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="780" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="848" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-        </g>
-        <g transform="translate(0,184)">
-          <text x="80" y="0" class="body">3</text>
-          <text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="320" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="420" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-
-          <text x="600" y="0" class="body">7</text>
-          <text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="780" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="848" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-        </g>
-        <g transform="translate(0,212)">
-          <text x="80" y="0" class="body">4</text>
-          <text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text>
-          <text x="320" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="420" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-
-          <text x="600" y="0" class="body">8</text>
-          <text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="780" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-          <text x="848" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text>
-        </g>
+        <g transform="translate(0,128)"><text x="80" y="0" class="body">1</text><text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="320" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="420" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="600" y="0" class="body">5</text><text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="780" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="848" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text></g>
+        <g transform="translate(0,156)"><text x="80" y="0" class="body">2</text><text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="320" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="420" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="600" y="0" class="body">6</text><text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="780" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="848" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text></g>
+        <g transform="translate(0,184)"><text x="80" y="0" class="body">3</text><text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="320" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="420" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="600" y="0" class="body">7</text><text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="780" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="848" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text></g>
+        <g transform="translate(0,212)"><text x="80" y="0" class="body">4</text><text x="220" y="0" class="lbl-big" style="fill:#f6802b;" text-anchor="middle">▲</text><text x="320" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="420" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="600" y="0" class="body">8</text><text x="700" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="780" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text><text x="848" y="0" class="lbl-big" style="fill:#2347d9;" text-anchor="middle">▼</text></g>
 
         <line x1="40" y1="232" x2="856" y2="232" class="stroke-soft"/>
-
-        <text x="40" y="260" class="lbl">CLAIM (BELL'S COUNTING ARGUMENT)</text>
-        <text x="40" y="282" class="body">Pick any sheet at random. Now pick two of its three columns at random and check if they match.</text>
-        <text x="40" y="300" class="body">For sheets 1 and 8 (all-same), all three pair-comparisons match → 100% match rate.</text>
-        <text x="40" y="318" class="body">For the six "mixed" sheets, exactly two pair-comparisons match and one doesn't → 33% mismatch rate.</text>
-        <text x="40" y="336" class="body" style="fill:#c64545;"><strong>So across all sheets, at least <span style="font-family:var(--mono);">1/3</span> of pair-comparisons must match in each pair, no matter which sheet you drew.</strong></text>
+        <text x="40" y="260" class="lbl-soft">FIG. 3.2 · THE EIGHT POSSIBLE INSTRUCTION SHEETS</text>
       </svg>
-      <figcaption><span class="figno">FIG. 3.2</span> A particle's "envelope" is one of these eight triples. The geometry of "two columns out of three must agree" forces a hard lower bound on the match rate, no matter how the source weights the eight sheets.</figcaption>
+      <figcaption><span class="figno">FIG. 3.2</span> Sheets 1 and 8 are "all the same" — every dial gives the same flash. The other six are "mixed" — two of one symbol and one of the other.</figcaption>
     </figure>
 
-    <p>
-      Now translate that into Alice and Bob's notebook. Whenever Alice picks dial X and Bob picks dial Y (with X ≠ Y), they're effectively comparing two of the three columns on the same hidden sheet. Alice's flash is whatever's in column X; Bob's flash is the <em>opposite</em> of whatever's in column Y (because Bob's particle carries the inverted sheet). For Alice and Bob's flashes to <em>match</em>, the two columns of the original sheet must be <em>different</em>.
-    </p>
+
+    <!-- ============== §3.3 BOUND ============== -->
+    <h2 id="bound"><span class="num">§3.3</span>The counting argument</h2>
 
     <p>
-      Looking at FIG 3.2: out of every 6-of-8 mixed sheets, two of three column-pairs are different and one is the same. Across ALL sheets (mixed + uniform), the fraction of column-pairs that are different is <strong>at most</strong> 2/3 — which means Alice and Bob's match rate, averaged across all the cross-dial trials (X≠Y), is at most <strong>2/3 ≈ 66.7%</strong>.
-    </p>
-
-    <div class="eq" style="text-align:left;">
-      <strong>Bell's bound (the simple form).</strong>
-      In any sealed-envelope theory, when Alice and Bob use different dials randomly chosen from {A,B,C}, the fraction of trials where their flashes match must be ≤ <strong>2/3</strong>.
-      <span class="lbl">EQ 3.1</span>
-    </div>
-
-
-    <!-- ============== §3.3 BREAKING ============== -->
-    <h2 id="breaking"><span class="num">§3.3</span>Where the universe breaks the rule</h2>
-
-    <p>
-      Now compute what quantum mechanics actually predicts for these three dial settings. Alice and Bob's dial difference, when they pick different ones, is always 60° or 120° (because the three directions are 60° apart on a clock face). From the curve in chapter 1, we can read off the predicted match rates:
-    </p>
-
-    <figure>
-      <svg class="diag" viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg">
-        <text x="24" y="28" class="lbl-big">QM PREDICTION FOR THE THREE-DIAL EXPERIMENT</text>
-        <text x="24" y="44" class="lbl-soft">QUANTUM MECHANICS SAYS: AT 60° APART, MATCH 25%; AT 120° APART, MATCH 75%</text>
-        <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
-
-        <!-- the QM curve, with markers at 60 and 120 -->
-        <line x1="80" y1="320" x2="820" y2="320" class="stroke-2"/>
-        <line x1="80" y1="100" x2="80" y2="320" class="stroke-2"/>
-
-        <text x="68" y="104" class="lbl-soft" text-anchor="end">100%</text>
-        <text x="68" y="160" class="lbl-soft" text-anchor="end">75%</text>
-        <text x="68" y="270" class="lbl-soft" text-anchor="end">25%</text>
-        <text x="68" y="324" class="lbl-soft" text-anchor="end">0%</text>
-        <line x1="76" y1="156" x2="84" y2="156" class="stroke"/>
-        <line x1="76" y1="266" x2="84" y2="266" class="stroke"/>
-
-        <line x1="80" y1="316" x2="80" y2="324" class="stroke"/>
-        <line x1="320" y1="316" x2="320" y2="324" class="stroke"/>
-        <line x1="560" y1="316" x2="560" y2="324" class="stroke"/>
-        <line x1="820" y1="316" x2="820" y2="324" class="stroke"/>
-        <text x="80" y="338" class="lbl-soft" text-anchor="middle">0°</text>
-        <text x="320" y="338" class="lbl-soft" text-anchor="middle">60°</text>
-        <text x="560" y="338" class="lbl-soft" text-anchor="middle">120°</text>
-        <text x="820" y="338" class="lbl-soft" text-anchor="middle">180°</text>
-        <text x="450" y="358" class="lbl">DIAL DIFFERENCE</text>
-
-        <!-- QM curve -->
-        <path d="M 80 320 C 200 314 280 280 360 240 C 460 192 540 140 820 100" stroke="#2347d9" fill="none" stroke-width="2.4"/>
-
-        <!-- markers at 60 and 120 -->
-        <circle cx="320" cy="266" r="6" fill="#2347d9"/>
-        <line x1="320" y1="316" x2="320" y2="266" stroke="#2347d9" stroke-width="0.8" stroke-dasharray="2 2"/>
-        <line x1="76" y1="266" x2="320" y2="266" stroke="#2347d9" stroke-width="0.8" stroke-dasharray="2 2"/>
-        <text x="328" y="262" class="lbl" style="fill:#2347d9;">25%</text>
-
-        <circle cx="560" cy="156" r="6" fill="#2347d9"/>
-        <line x1="560" y1="316" x2="560" y2="156" stroke="#2347d9" stroke-width="0.8" stroke-dasharray="2 2"/>
-        <line x1="76" y1="156" x2="560" y2="156" stroke="#2347d9" stroke-width="0.8" stroke-dasharray="2 2"/>
-        <text x="568" y="152" class="lbl" style="fill:#2347d9;">75%</text>
-
-        <!-- bell bound 2/3 ≈ 66.7% line -->
-        <line x1="80" y1="174" x2="820" y2="174" stroke="#c64545" stroke-width="1.4" stroke-dasharray="4 4"/>
-        <text x="816" y="166" class="lbl" style="fill:#c64545;" text-anchor="end">BELL'S BOUND · 2/3 ≈ 66.7%</text>
-
-        <text x="24" y="370" class="lbl-soft">FIG. 3.3 · QM (BLUE) VS BELL'S BOUND (RED DASHED)</text>
-      </svg>
-      <figcaption><span class="figno">FIG. 3.3</span> When dials are 60° apart, quantum mechanics predicts they match only 25% of the time. When 120° apart, they match 75%. Combine with the same-dial 0% — across all the cross-dial trials, the average works out to 50%, well below 66.7%. So far, so good.</figcaption>
-    </figure>
-
-    <p>
-      So far so good — quantum mechanics actually predicts a <em>lower</em> match rate than Bell's bound at first glance. But hold on. The Bell bound applies to <strong>cross-dial</strong> trials only (different dial settings). When Alice and Bob both pick the same dial, they always get opposite flashes — match rate = 0%. The interesting comparison is the cross-dial-only average:
+      Now look closely at any one of those eight sheets, and notice something. Pick any two of its three columns. Compare them. Either they show the same symbol, or they don't. Across all three possible column-pairs (A&B, A&C, B&C), how often do they match?
     </p>
 
     <ul style="line-height:1.7;">
-      <li>QM at 60° apart: <strong>25%</strong> match</li>
-      <li>QM at 120° apart: <strong>75%</strong> match</li>
-      <li>Average across cross-dial trials: <strong>(25 + 25 + 75 + 75 + 75 + 75) / 6 = 50%</strong></li>
+      <li>For sheets <strong>1 and 8</strong> (all-▲ and all-▼): all three column-pairs match. Match rate across pairs: <strong>3 out of 3 = 100%.</strong></li>
+      <li>For each of the <strong>six mixed sheets</strong>: exactly one column-pair matches and two don't. Match rate: <strong>1 out of 3 ≈ 33%.</strong></li>
     </ul>
 
     <p>
-      That's still below 2/3. So this particular three-direction setup doesn't actually catch the violation — it satisfies Bell's simple counting bound. The actual violation appears with a slightly different choice of angles. The version Bell explicitly works out in his paper uses three directions where two pairs are 90° apart and one pair is 0° apart (i.e., the <em>same</em> direction). But the cleanest modern version is <strong>CHSH</strong>, due to Clauser, Horne, Shimony, and Holt in 1969 — it uses four directions and a slightly different counting rule.
+      The point is that <em>every</em> sheet, no matter which one the source picks, has at least one matching pair. <strong>So at least 1/3 of all column-comparisons must match, no matter how the source weights the eight sheets.</strong>
+    </p>
+
+    <p>
+      Now translate that into Alice and Bob's table. Whenever Alice's dial is at X and Bob's is at Y (with X different from Y — that's what we care about for cross-dial trials), they're effectively comparing two of the three columns of one sheet. Alice's flash is what's in column X; Bob's flash is the <em>opposite</em> of what's in column Y, because Bob's particle carries the inverted sheet.
+    </p>
+
+    <p>
+      So Alice's flash matches Bob's flash exactly when the original sheet's columns X and Y are <em>different</em>. Across all the cross-dial trials, the fraction where they match is the fraction where the corresponding column-pair of the original sheet differed. By the counting argument above, this fraction is <em>at most</em> 2/3.
+    </p>
+
+    <div class="eq" style="text-align:left;">
+      <strong>Bell's bound (the simple version).</strong>
+      In any sealed-envelope theory, Alice and Bob's match rate across cross-dial trials must be <strong>at most 2/3 ≈ 67%</strong>.
+      <span class="lbl">EQ 3.1</span>
+    </div>
+
+    <p>
+      Notice what this is. It's not a fact about any <em>specific</em> sealed-envelope theory. It's a fact about <em>all</em> of them, simultaneously, by virtue of arithmetic alone — no matter what rule the envelope uses, no matter what weights the source uses, every theory in this whole family must respect that ceiling. The 2/3 isn't a guess; it falls right out of "at least one of three columns must match its neighbour."
+    </p>
+
+
+    <!-- ============== §3.4 QM ============== -->
+    <h2 id="qm"><span class="num">§3.4</span>What the universe actually does</h2>
+
+    <p>
+      Now let's see what quantum mechanics — or, equivalently, what the actual experiment — predicts for this same setup. We go back to the curve in chapter 1 and read off the values for the relevant angles.
+    </p>
+
+    <p>
+      With Alice and Bob each picking randomly from {A, B, C}, the angle between their two dials, when they pick differently, is always either 60° or 120°. From the curve:
+    </p>
+
+    <ul style="line-height:1.7;">
+      <li>Dials 60° apart → match rate <strong>25%</strong></li>
+      <li>Dials 120° apart → match rate <strong>75%</strong></li>
+    </ul>
+
+    <p>
+      Hm. The average across all six different-dial combinations comes out to 50%, which is below 67%, so this <em>specific</em> three-dial setup doesn't actually catch the violation. (Bell's original 1964 paper used a slightly different angle configuration that does catch it.)
+    </p>
+
+    <p>
+      But hang on — that's an artefact of how I set up the simple version. Bell's <em>argument</em> is general: for the right choice of angles, the experimental match rate exceeds the 2/3 bound. The cleanest modern version, which is what every laboratory experiment actually tests, uses four angles and is called CHSH.
+    </p>
+
+
+    <!-- ============== §3.5 CHSH ============== -->
+    <h2 id="chsh"><span class="num">§3.5</span>The version experimentalists actually use</h2>
+
+    <p>
+      In 1969, four physicists — John Clauser, Michael Horne, Abner Shimony, and Richard Holt — re-derived Bell's argument with a small but important tweak. Instead of three dial settings, use four: two for Alice (at 0° and 45°) and two for Bob (at 22.5° and 67.5°). Compute a specific weighted score from the cross-dial correlations, called <em>S</em>.
+    </p>
+
+    <p>
+      The CHSH bound for any sealed-envelope theory: <strong>|S| ≤ 2</strong>. Quantum mechanics, with the angles above, predicts <strong>|S| = 2√2 ≈ 2.83</strong>. The universe, when actually tested in laboratories, gives values right at 2.83 (within experimental error). Roughly 41% above the wall.
     </p>
 
     <figure>
-      <svg class="diag" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg">
-        <text x="24" y="28" class="lbl-big">CHSH — THE EXPERIMENTALLY-USED VERSION</text>
-        <text x="24" y="44" class="lbl-soft">FOUR DIAL ANGLES, ALICE PICKS FROM {0°, 45°}, BOB PICKS FROM {22.5°, 67.5°}</text>
+      <svg class="diag" viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg">
+        <text x="24" y="28" class="lbl-big">CHSH — THE EXPERIMENTAL VERSION</text>
+        <text x="24" y="44" class="lbl-soft">FOUR DIAL ANGLES, ONE WEIGHTED SCORE, ONE WALL THE UNIVERSE WALKS THROUGH</text>
         <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
 
-        <!-- left: arrows for the four angles -->
-        <g transform="translate(220,200)">
+        <g transform="translate(220,180)">
           <circle r="100" class="stroke-2" fill="#fff"/>
-          <!-- Alice 0° -->
           <line x1="0" y1="0" x2="0" y2="-100" stroke="#c64545" stroke-width="2.6"/>
           <text x="0" y="-110" class="lbl" text-anchor="middle" style="fill:#c64545;">A₁ · 0°</text>
-          <!-- Alice 45° -->
           <line x1="0" y1="0" x2="71" y2="-71" stroke="#c64545" stroke-width="2.6" stroke-dasharray="3 3"/>
           <text x="84" y="-78" class="lbl" style="fill:#c64545;">A₂ · 45°</text>
-          <!-- Bob 22.5° -->
           <line x1="0" y1="0" x2="38" y2="-92" stroke="#2347d9" stroke-width="2.6"/>
           <text x="42" y="-100" class="lbl" style="fill:#2347d9;">B₁ · 22.5°</text>
-          <!-- Bob 67.5° -->
           <line x1="0" y1="0" x2="92" y2="-38" stroke="#2347d9" stroke-width="2.6" stroke-dasharray="3 3"/>
           <text x="100" y="-30" class="lbl" style="fill:#2347d9;">B₂ · 67.5°</text>
           <circle r="3" class="fill"/>
         </g>
 
-        <!-- right: comparison -->
-        <g transform="translate(440,120)">
-          <text x="0" y="0" class="lbl-big">THE CHSH NUMBER S</text>
-          <text x="0" y="20" class="body">Compute a specific weighted sum of</text>
-          <text x="0" y="36" class="body">the four cross-dial correlations.</text>
+        <g transform="translate(440,100)">
+          <text x="0" y="0" class="lbl-big">SEALED-ENVELOPE BOUND</text>
+          <text x="0" y="20" class="body">|S| ≤ 2</text>
+          <text x="0" y="36" class="lbl-soft">must hold for any sealed-envelope theory</text>
 
-          <text x="0" y="68" class="lbl">SEALED-ENVELOPE BOUND</text>
-          <text x="0" y="86" class="body">|S| ≤ 2 — must hold for any local</text>
-          <text x="0" y="102" class="body">hidden-variable theory whatsoever.</text>
+          <text x="0" y="76" class="lbl-big" style="fill:#2347d9;">QUANTUM PREDICTION</text>
+          <text x="0" y="96" class="body" style="fill:#2347d9;">|S| = 2√2 ≈ 2.83</text>
+          <text x="0" y="112" class="lbl-soft">at the angles shown</text>
 
-          <text x="0" y="134" class="lbl" style="fill:#2347d9;">QUANTUM PREDICTION</text>
-          <text x="0" y="152" class="body" style="fill:#2347d9;">|S| = 2√2 ≈ 2.828 — at the angles above.</text>
-
-          <text x="0" y="186" class="lbl-big" style="fill:#c64545;">VIOLATION = 2.828 / 2 ≈ 41% OVER THE BOUND</text>
+          <text x="0" y="160" class="lbl-big" style="fill:#c64545;">≈ 41% PAST THE WALL</text>
+          <text x="0" y="176" class="lbl-soft" style="fill:#c64545;">and that's what experiments actually measure</text>
         </g>
 
-        <text x="24" y="345" class="lbl-soft">FIG. 3.4 · CHSH GEOMETRY AND THE BOUND VIOLATION</text>
+        <text x="24" y="305" class="lbl-soft">FIG. 3.3 · CHSH CONFIGURATION AND THE BOUND VIOLATION</text>
       </svg>
-      <figcaption><span class="figno">FIG. 3.4</span> The CHSH version of Bell's argument uses four dial directions and a specific weighted score called <em>S</em>. Any sealed-envelope theory has to give |S| ≤ 2. Quantum mechanics, at the angles above, gives |S| = 2√2 ≈ 2.828. The universe sits 41% above the bound — and experiments since 1972 have repeatedly confirmed it does.</figcaption>
+      <figcaption><span class="figno">FIG. 3.3</span> The CHSH form of Bell's argument, the one every real-world Bell test has used since 1972. Same logic as the three-dial version, slightly different bookkeeping; the numbers come out cleaner.</figcaption>
     </figure>
 
     <div class="callout">
       <span class="tag">The bottom line</span>
       <p>
-        It doesn't matter exactly how you set up the dials. Bell's argument has been re-derived a hundred times over the past 60 years using different angles and different counting tricks. <em>Every version</em> has the same shape: a hard upper bound on what a sealed-envelope theory can produce, and a quantum prediction that smashes through it. Once experimentalists actually built the setup, they found the universe sides with quantum mechanics every single time.
+        It doesn't really matter which version of Bell's argument you use — three dials, four dials, six dials, whatever angles you like. Bell's argument has been re-derived dozens of times over the past sixty years. <em>Every</em> version has the same shape: an upper bound that any sealed-envelope theory must respect, and a quantum-mechanical prediction that breezes through it. When experimentalists actually built the apparatus, they found the universe sides with quantum mechanics every single time.
       </p>
     </div>
+
+    <p>
+      The puzzle is solved, but the answer is unsettling. The sealed envelope cannot exist. Some other story has to be true.
+    </p>
 
 
     <div class="pagenav">
@@ -350,7 +292,7 @@
   <div class="margin-tag">
     <span class="top">ON THE EINSTEIN PODOLSKY ROSEN PARADOX</span>
     <span class="mid">CHAPTER 3 · CLEVER EXPERIMENT</span>
-    <span class="bot">FIG. 3.1 — 3.4</span>
+    <span class="bot">FIG. 3.1 — 3.3</span>
   </div>
 
 </main>
