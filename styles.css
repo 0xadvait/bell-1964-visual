@@ -130,8 +130,8 @@ a:hover { text-decoration: underline; }
 }
 
 @media (max-width: 900px) {
-  .shell { grid-template-columns: 1fr; gap: 24px; padding: 24px 14px 64px; }
-  .toc { position: static !important; max-height: none !important; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+  .shell { grid-template-columns: 1fr; gap: 20px; padding: 20px 14px 56px; }
+  .toc { position: static !important; max-height: none !important; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
   .margin-tag { display: none; }
   .topbar {
     padding: 10px 14px;
@@ -148,81 +148,78 @@ a:hover { text-decoration: underline; }
     gap: 0 8px;
   }
   .topbar .crumbs a { margin: 0; }
-  .cover { padding: 28px 0 24px; }
-  .cover .header-block { grid-template-columns: 1fr; gap: 18px; margin-bottom: 24px; }
-  .cover .title { font-size: 36px; line-height: 1.02; }
-  .cover .sub { font-size: 14px; }
-  .cover .meta { font-size: 10px; line-height: 1.7; }
-  .content h1 { font-size: 32px; }
-  .content .deck { font-size: 16px; max-width: 100%; }
-  .content h2 { font-size: 22px; margin-top: 32px; line-height: 1.2; }
+
+  .cover { padding: 24px 0 20px; }
+  .cover .header-block { grid-template-columns: 1fr; gap: 18px; margin-bottom: 22px; }
+  .cover .title { font-size: 38px; line-height: 1.02; }
+  .cover .sub { font-size: 15px; }
+  .cover .meta { font-size: 10.5px; line-height: 1.7; }
+
+  .content h1 { font-size: 30px; line-height: 1.1; }
+  .content h1 .num { font-size: 12px; margin-bottom: 8px; }
+  .content .deck { font-size: 17px; max-width: 100%; line-height: 1.45; }
+  .content h2 { font-size: 22px; margin-top: 30px; line-height: 1.2; }
   .content h3 { font-size: 17px; }
-  .content { max-width: 100%; font-size: 15px; line-height: 1.6; }
+  .content { max-width: 100%; font-size: 16px; line-height: 1.65; }
   .chapters { grid-template-columns: 1fr; gap: 12px; }
   .chapters .chapter-card { padding: 16px 18px; }
   .chapters .chapter-card .num { font-size: 10px; }
   .chapters .chapter-card .name { font-size: 18px; margin: 4px 0 6px; }
-  .chapters .chapter-card .blurb { font-size: 13px; line-height: 1.45; }
-  /* Override the inline grid-column:span-2 on the terminology card — single-column on mobile */
+  .chapters .chapter-card .blurb { font-size: 13.5px; line-height: 1.5; }
   .chapters .chapter-card[href="terminology.html"] { grid-column: auto !important; }
 
-  /* ---------- DIAGRAM HANDLING ON MOBILE ----------
-     The dense SVG diagrams were drawn for an 840-940 px viewBox.
-     Squeezing them into a 360 px screen makes the labels illegible.
-     Solution: keep the SVG at its intended size and let the user scroll horizontally.
-     We also surface a small swipe hint above the figure. */
-  figure { margin: 22px -4px; }
-  figure svg {
-    min-width: 720px;       /* hold native size — readable */
-    border-radius: 0;
-  }
-  /* the figure becomes the horizontal-scroll viewport */
-  figure {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
-  }
-  figure::after {
-    content: "↔ swipe";
-    position: absolute;
-    top: 6px;
-    right: 12px;
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    background: rgba(255,253,246,0.8);
-    padding: 2px 6px;
-    border-radius: 2px;
-    pointer-events: none;
-    z-index: 2;
-  }
-  figcaption {
-    font-size: 10.5px;
-    padding: 0 4px;
-  }
-  /* on mobile we can also pump up the SVG text so a slight zoom isn't required */
-  .diag .lbl, .diag .lbl-soft { font-size: 10.5px; }
-  .diag .lbl-big { font-size: 12px; }
-  .diag .body { font-size: 11.5px; }
+  /* DIAGRAMS — let them shrink with the container instead of forcing horizontal scroll.
+     Text inside SVG bumps up via the rules below so labels stay readable. */
+  figure { margin: 22px 0; }
+  figure svg { min-width: 0; width: 100%; border-radius: 2px; }
+  figcaption { font-size: 13px; line-height: 1.55; padding: 0; }
+  figcaption .figno { font-size: 11px; }
+  figcaption .desc { font-size: 13.5px; }
 
-  .pagenav { flex-direction: column; gap: 18px; align-items: flex-start; padding: 0 4px; }
+  /* Pump SVG text up so it stays legible at smaller widths */
+  .diag .lbl, .diag .lbl-soft { font-size: 12px; }
+  .diag .lbl-big { font-size: 13.5px; }
+  .diag .body { font-size: 13px; }
 
-  /* Cover hero stays readable: it's tall, stays full width via the figure container */
-  .cover .heroart { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -4px; }
-  .cover .heroart svg { min-width: 720px; border-radius: 0; }
+  .pagenav { flex-direction: column; gap: 18px; align-items: flex-start; padding: 0; }
 
-  /* Callouts shrink slightly */
-  .callout { padding: 14px 16px; font-size: 13.5px; }
+  .cover .heroart { margin: 0; }
+  .cover .heroart svg { min-width: 0; width: 100%; border-radius: 2px; }
+
+  .callout { padding: 14px 16px; font-size: 14.5px; line-height: 1.55; }
   .compare { grid-template-columns: 1fr; gap: 12px; }
 
-  /* Math equation blocks scroll horizontally if too wide */
-  .eq { padding: 10px 12px; font-size: 13px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .eq { padding: 10px 12px; font-size: 13.5px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* Linkbar: stack groups on phone */
+  .linkbar {
+    padding: 8px 14px;
+    font-size: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .linkbar .group { gap: 12px; }
+  .linkbar .arrow { display: none; }
 }
 @media (max-width: 540px) {
-  .shell { padding: 18px 12px 48px; }
+  .shell { padding: 16px 12px 40px; }
+  .cover .title { font-size: 30px; }
+  .content h1 { font-size: 26px; }
+  .content h2 { font-size: 19px; }
+  .content { font-size: 15.5px; }
+  .term { grid-template-columns: 1fr; }
+  .term .name { font-size: 16px; }
+  .term .body { font-size: 14px; }
+  .topbar { padding: 8px 12px; }
+  .topbar .crumbs { font-size: 9.5px; }
+  .topbar .brand { font-size: 12px; }
+  .linkbar { font-size: 9.5px; }
+  .linkbar .group { gap: 10px; row-gap: 4px; }
+  .diag .lbl, .diag .lbl-soft { font-size: 13px; }
+  .diag .lbl-big { font-size: 14.5px; }
+  .diag .body { font-size: 13.5px; }
+}
   .cover .title { font-size: 28px; }
   .content h1 { font-size: 26px; }
   .content h1 .num { font-size: 14px; margin-bottom: 10px; }
@@ -688,4 +685,28 @@ figcaption .desc {
 }
 @media (max-width: 540px) {
   .cover .title { font-size: 28px; }
+}
+
+
+/* ============================================================
+ * Mobile overrides — appended at the end so they take precedence
+ * over any earlier @media rules in the file.
+ * ============================================================ */
+@media (max-width: 900px) {
+  figure svg { min-width: 0 !important; width: 100% !important; border-radius: 2px; }
+  .cover .heroart svg { min-width: 0 !important; width: 100% !important; border-radius: 2px; }
+  .cover .heroart { margin: 0 !important; overflow: visible !important; }
+  figure { overflow: visible !important; margin: 22px 0 !important; }
+  figure::after { display: none !important; }
+  .diag .lbl, .diag .lbl-soft { font-size: 12px !important; }
+  .diag .lbl-big { font-size: 13.5px !important; }
+  .diag .body { font-size: 13px !important; }
+  .content { font-size: 16px; line-height: 1.65; }
+  figcaption { font-size: 13px !important; line-height: 1.55 !important; }
+  .linkbar { flex-direction: column; align-items: flex-start; gap: 6px; padding: 8px 14px; font-size: 10px; }
+  .linkbar .group { gap: 12px; }
+}
+@media (max-width: 540px) {
+  .diag .lbl, .diag .lbl-soft { font-size: 13px !important; }
+  .diag .lbl-big { font-size: 14.5px !important; }
 }

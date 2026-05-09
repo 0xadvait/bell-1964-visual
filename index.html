@@ -95,8 +95,8 @@
       </div>
 
       <!-- ============== HERO: simplified EPR setup ============== -->
-      <div class="heroart">
-        <svg class="diag" viewBox="0 0 920 480" xmlns="http://www.w3.org/2000/svg">
+      <figure class="heroart">
+        <svg class="diag" viewBox="0 0 920 380" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <marker id="cov-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
               <path d="M 0 0 L 10 5 L 0 10 z" class="fill"/>
@@ -107,78 +107,96 @@
             </radialGradient>
           </defs>
 
-          <text x="28" y="30" class="lbl-big">THE WHOLE EXPERIMENT IN ONE PICTURE</text>
-          <text x="28" y="46" class="lbl-soft">A SOURCE EMITS TWO PARTICLES. EACH GOES INTO ITS OWN BOX. EACH BOX HAS A DIAL AND A LIGHT.</text>
+          <!-- header strip -->
+          <text x="28" y="30" class="lbl-big">THE WHOLE EXPERIMENT</text>
+          <text x="28" y="46" class="lbl-soft">A SOURCE EMITS TWO PARTICLES · EACH GOES INTO ITS OWN BOX · EACH BOX HAS A DIAL AND A LIGHT</text>
           <line x1="28" y1="58" x2="892" y2="58" class="stroke-soft"/>
 
-          <!-- the source -->
-          <circle cx="460" cy="260" r="50" fill="url(#cov-glow)"/>
-          <circle cx="460" cy="260" r="18" class="stroke-2 fill-soft"/>
-          <text x="460" y="265" class="lbl" text-anchor="middle">SOURCE</text>
-          <text x="460" y="334" class="lbl-soft" text-anchor="middle">emits a special pair of particles</text>
-          <text x="460" y="348" class="lbl-soft" text-anchor="middle">that "remember" each other</text>
+          <!-- the source (centred) -->
+          <circle cx="460" cy="200" r="46" fill="url(#cov-glow)"/>
+          <circle cx="460" cy="200" r="18" class="stroke-2 fill-soft"/>
+          <text x="460" y="204" class="lbl" text-anchor="middle">SOURCE</text>
 
-          <!-- left arrow -->
-          <line x1="442" y1="260" x2="280" y2="260" class="stroke-2" stroke-dasharray="4 3" marker-end="url(#cov-arr)"/>
-          <text x="360" y="252" class="lbl-soft" text-anchor="middle">particle 1</text>
+          <!-- arrows from source -->
+          <line x1="442" y1="200" x2="320" y2="200" class="stroke-2" stroke-dasharray="4 3" marker-end="url(#cov-arr)"/>
+          <text x="380" y="190" class="lbl-soft" text-anchor="middle">particle 1</text>
+          <line x1="478" y1="200" x2="600" y2="200" class="stroke-2" stroke-dasharray="4 3" marker-end="url(#cov-arr)"/>
+          <text x="540" y="190" class="lbl-soft" text-anchor="middle">particle 2</text>
 
-          <!-- right arrow -->
-          <line x1="478" y1="260" x2="640" y2="260" class="stroke-2" stroke-dasharray="4 3" marker-end="url(#cov-arr)"/>
-          <text x="560" y="252" class="lbl-soft" text-anchor="middle">particle 2</text>
+          <!-- ===== ALICE'S BOX (left) ===== -->
+          <g transform="translate(60,100)">
+            <rect x="0" y="0" width="240" height="200" class="stroke-2 fill-soft" rx="6"/>
+            <text x="120" y="-12" class="lbl-big" text-anchor="middle">ALICE'S BOX</text>
 
-          <!-- LEFT BOX (Alice) -->
-          <g transform="translate(60,160)">
-            <rect x="0" y="0" width="220" height="180" class="stroke-2 fill-soft" rx="6"/>
-            <text x="110" y="-10" class="lbl-big" text-anchor="middle">ALICE'S BOX</text>
+            <!-- DIAL — full width upper half -->
+            <g transform="translate(60,72)">
+              <circle r="36" class="stroke-2" fill="#fff"/>
+              <!-- ticks -->
+              <line x1="0" y1="-36" x2="0" y2="-30" class="stroke"/>
+              <line x1="36" y1="0" x2="30" y2="0" class="stroke"/>
+              <line x1="-36" y1="0" x2="-30" y2="0" class="stroke"/>
+              <line x1="0" y1="36" x2="0" y2="30" class="stroke"/>
+              <!-- pointer -->
+              <line x1="0" y1="0" x2="22" y2="-22" stroke="#c64545" stroke-width="2.4" marker-end="url(#cov-arr)"/>
+              <circle r="3" class="fill"/>
+              <text x="0" y="-44" class="lbl-soft" text-anchor="middle">0°</text>
+              <text x="44" y="3" class="lbl-soft">90°</text>
+              <text x="-44" y="3" class="lbl-soft" text-anchor="end">270°</text>
+            </g>
+            <text x="60" y="138" class="lbl" text-anchor="middle">DIAL</text>
+            <text x="60" y="152" class="lbl-soft" text-anchor="middle">scientist sets the angle</text>
 
-            <!-- particle entry -->
-            <line x1="220" y1="100" x2="240" y2="100" class="stroke" marker-end="url(#cov-arr)"/>
-            <text x="232" y="92" class="lbl-soft" text-anchor="middle"></text>
+            <!-- LIGHT — full width lower half, separated -->
+            <g transform="translate(180,72)">
+              <circle r="22" class="stroke-2" fill="#fffbea"/>
+              <text x="0" y="6" text-anchor="middle" style="fill:#f6802b; font-family:var(--mono); font-size:18px; font-weight:700;">▲</text>
+            </g>
+            <text x="180" y="138" class="lbl" text-anchor="middle">LIGHT</text>
+            <text x="180" y="152" class="lbl-soft" text-anchor="middle">flashes ▲ or ▼</text>
 
-            <!-- dial -->
-            <circle cx="70" cy="70" r="32" class="stroke-2" fill="#fff"/>
-            <line x1="70" y1="70" x2="92" y2="48" stroke="#c64545" stroke-width="2.4" marker-end="url(#cov-arr)"/>
-            <circle cx="70" cy="70" r="3" class="fill"/>
-            <text x="70" y="124" class="lbl" text-anchor="middle">DIAL</text>
-            <text x="70" y="138" class="lbl-soft" text-anchor="middle">choose 0°, 45°, 90°…</text>
-
-            <!-- light bulb -->
-            <circle cx="160" cy="70" r="20" class="stroke-2" fill="#fffbea"/>
-            <text x="160" y="74" class="lbl-big" text-anchor="middle" style="fill:#f6802b;">↑</text>
-            <text x="160" y="124" class="lbl" text-anchor="middle">LIGHT</text>
-            <text x="160" y="138" class="lbl-soft" text-anchor="middle">flashes ↑ or ↓</text>
+            <!-- particle entry indicator -->
+            <line x1="-24" y1="100" x2="0" y2="100" class="stroke" stroke-dasharray="2 2"/>
           </g>
 
-          <!-- RIGHT BOX (Bob) -->
-          <g transform="translate(640,160)">
-            <rect x="0" y="0" width="220" height="180" class="stroke-2 fill-soft" rx="6"/>
-            <text x="110" y="-10" class="lbl-big" text-anchor="middle">BOB'S BOX</text>
+          <!-- ===== BOB'S BOX (right) ===== -->
+          <g transform="translate(620,100)">
+            <rect x="0" y="0" width="240" height="200" class="stroke-2 fill-soft" rx="6"/>
+            <text x="120" y="-12" class="lbl-big" text-anchor="middle">BOB'S BOX</text>
 
-            <line x1="-20" y1="100" x2="0" y2="100" class="stroke" marker-end="url(#cov-arr)"/>
+            <!-- DIAL -->
+            <g transform="translate(60,72)">
+              <circle r="36" class="stroke-2" fill="#fff"/>
+              <line x1="0" y1="-36" x2="0" y2="-30" class="stroke"/>
+              <line x1="36" y1="0" x2="30" y2="0" class="stroke"/>
+              <line x1="-36" y1="0" x2="-30" y2="0" class="stroke"/>
+              <line x1="0" y1="36" x2="0" y2="30" class="stroke"/>
+              <line x1="0" y1="0" x2="-22" y2="22" stroke="#c64545" stroke-width="2.4" marker-end="url(#cov-arr)"/>
+              <circle r="3" class="fill"/>
+              <text x="0" y="-44" class="lbl-soft" text-anchor="middle">0°</text>
+              <text x="44" y="3" class="lbl-soft">90°</text>
+              <text x="-44" y="3" class="lbl-soft" text-anchor="end">270°</text>
+            </g>
+            <text x="60" y="138" class="lbl" text-anchor="middle">DIAL</text>
+            <text x="60" y="152" class="lbl-soft" text-anchor="middle">scientist sets the angle</text>
 
-            <circle cx="70" cy="70" r="32" class="stroke-2" fill="#fff"/>
-            <line x1="70" y1="70" x2="48" y2="92" stroke="#c64545" stroke-width="2.4" marker-end="url(#cov-arr)"/>
-            <circle cx="70" cy="70" r="3" class="fill"/>
-            <text x="70" y="124" class="lbl" text-anchor="middle">DIAL</text>
-            <text x="70" y="138" class="lbl-soft" text-anchor="middle">choose 0°, 45°, 90°…</text>
+            <!-- LIGHT -->
+            <g transform="translate(180,72)">
+              <circle r="22" class="stroke-2" fill="#fffbea"/>
+              <text x="0" y="8" text-anchor="middle" style="fill:#2347d9; font-family:var(--mono); font-size:18px; font-weight:700;">▼</text>
+            </g>
+            <text x="180" y="138" class="lbl" text-anchor="middle">LIGHT</text>
+            <text x="180" y="152" class="lbl-soft" text-anchor="middle">flashes ▲ or ▼</text>
 
-            <circle cx="160" cy="70" r="20" class="stroke-2" fill="#fffbea"/>
-            <text x="160" y="78" class="lbl-big" text-anchor="middle" style="fill:#2347d9;">↓</text>
-            <text x="160" y="124" class="lbl" text-anchor="middle">LIGHT</text>
-            <text x="160" y="138" class="lbl-soft" text-anchor="middle">flashes ↑ or ↓</text>
+            <line x1="240" y1="100" x2="264" y2="100" class="stroke" stroke-dasharray="2 2"/>
           </g>
 
-          <!-- bottom narrative -->
-          <g transform="translate(80,400)">
-            <text x="0" y="0" class="lbl-big">THE PUZZLE</text>
-            <text x="0" y="20" class="body">Alice and Bob each turn their dial to whatever angle they like. Each then sees their light flash up or down. They do this thousands</text>
-            <text x="0" y="36" class="body">of times. When they later compare notes, they find their results are <em>weirdly correlated</em> — in a way that no story about</text>
-            <text x="0" y="52" class="body">"the particles secretly carried instructions when they left the source" can explain. That weirdness is what Bell proved.</text>
-          </g>
-
-          <text x="892" y="465" class="lbl-soft" text-anchor="end">FIG. 0 · THE WHOLE BOOK IN ONE DIAGRAM</text>
+          <!-- bottom note -->
+          <text x="460" y="350" class="lbl-soft" text-anchor="middle">THE TWO BOXES CAN BE METRES, KILOMETRES, OR LIGHT-YEARS APART</text>
         </svg>
-      </div>
+        <figcaption>
+          <span class="figno">FIG. 0</span> The whole apparatus. Alice and Bob each turn their dial to whatever angle they like, then watch their light flash either ▲ or ▼. They do this thousands of times. When they later compare notes, they find their results are <em>weirdly correlated</em> — in a way that no story about "the particles secretly carried instructions when they left the source" can explain. <strong>That weirdness is what Bell proved.</strong>
+        </figcaption>
+      </figure>
     </div>
 
     <h2 style="margin-top:32px;">What this is</h2>
