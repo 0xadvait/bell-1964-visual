@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>1 · The puzzle — A visual reading of Bell 1964</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="linkbar">
+  <div class="group">
+    <span class="lbl-tag">Source</span>
+    <a href="https://journals.aps.org/ppf/abstract/10.1103/PhysicsPhysiqueFizika.1.195" target="_blank" rel="noopener">Paper · APS Journals<span class="arrow">↗</span></a>
+    <a href="https://en.wikipedia.org/wiki/John_Stewart_Bell" target="_blank" rel="noopener">Author · J. S. Bell<span class="arrow">↗</span></a>
+  </div>
+  <div class="group">
+    <span class="lbl-tag">Built by</span>
+    <a href="https://github.com/0xadvait" target="_blank" rel="noopener">GitHub · @0xadvait<span class="arrow">↗</span></a>
+    <a href="https://x.com/advait_jayant" target="_blank" rel="noopener">X · @advait_jayant<span class="arrow">↗</span></a>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="brand">A visual reading of <em>On the Einstein Podolsky Rosen Paradox</em> — J. S. Bell, 1964</div>
+  <div class="crumbs">
+    <a href="index.html">Cover</a> ·
+    <a href="chapter-1.html" class="current">1 · The puzzle</a> ·
+    <a href="chapter-2.html">2 · The glove analogy</a> ·
+    <a href="chapter-3.html">3 · The clever experiment</a> ·
+    <a href="chapter-4.html">4 · What it means</a> ·
+    <a href="terminology.html">Terms</a>
+  </div>
+</header>
+
+<main class="shell">
+
+  <aside class="toc">
+    <h3>Chapter 1</h3>
+    <ol style="counter-reset: none;">
+      <li style="counter-increment: none;"><a href="#two-particles">Two particles fly apart</a></li>
+      <li style="counter-increment: none;"><a href="#dial">A dial and a light</a></li>
+      <li style="counter-increment: none;"><a href="#correlation">Comparing results</a></li>
+      <li style="counter-increment: none;"><a href="#einstein">What bothered Einstein</a></li>
+    </ol>
+    <h3 style="margin-top:24px;">Other chapters</h3>
+    <ol>
+      <li><a href="chapter-1.html">The puzzle</a></li>
+      <li><a href="chapter-2.html">The glove analogy</a></li>
+      <li><a href="chapter-3.html">The clever experiment</a></li>
+      <li><a href="chapter-4.html">What it means</a></li>
+    </ol>
+    <h3 style="margin-top:24px;"><a href="terminology.html" style="color:var(--blue);">Terms →</a></h3>
+  </aside>
+
+  <article class="content">
+
+    <h1><span class="num">CHAPTER 1</span>The puzzle</h1>
+    <p class="deck">
+      A source spits out two particles in opposite directions. Two distant scientists each measure their particle. The pattern of results is the puzzle.
+    </p>
+
+
+    <!-- ============== §1.1 TWO PARTICLES ============== -->
+    <h2 id="two-particles"><span class="num">§1.1</span>Two particles fly apart</h2>
+
+    <p>
+      Imagine a small device sitting on a table. Every now and then, it emits two tiny particles in exactly opposite directions — one to the left, one to the right. Think of the source as if it were splitting something and shooting the halves outward. We don't need to worry about <em>how</em> it works. What matters is the rule: the two particles are connected, in some way, by their shared origin.
+    </p>
+
+    <figure>
+      <svg class="diag" viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ch1f1-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" class="fill"/>
+          </marker>
+          <radialGradient id="ch1-glow" cx="0.5" cy="0.5">
+            <stop offset="0%" stop-color="#ffd29e" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#f6802b" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <text x="24" y="28" class="lbl-big">A SOURCE EMITS TWO PARTICLES IN OPPOSITE DIRECTIONS</text>
+        <line x1="24" y1="40" x2="856" y2="40" class="stroke-soft"/>
+
+        <!-- ground line -->
+        <line x1="40" y1="220" x2="840" y2="220" class="dashed"/>
+        <text x="40" y="240" class="lbl-soft">TABLE TOP</text>
+
+        <!-- source -->
+        <circle cx="440" cy="160" r="40" fill="url(#ch1-glow)"/>
+        <rect x="420" y="180" width="40" height="40" class="stroke-2 fill-soft" rx="3"/>
+        <circle cx="440" cy="200" r="6" class="fill"/>
+        <text x="440" y="252" class="lbl" text-anchor="middle">SOURCE</text>
+
+        <!-- left particle (just emitted, blurred trail) -->
+        <circle cx="280" cy="160" r="8" fill="#5b7cf5"/>
+        <line x1="290" y1="160" x2="420" y2="160" stroke="#5b7cf5" stroke-width="1" stroke-dasharray="2 3" opacity="0.5"/>
+        <text x="280" y="140" class="lbl" text-anchor="middle">PARTICLE 1</text>
+        <text x="280" y="190" class="lbl-soft" text-anchor="middle">flying left</text>
+
+        <!-- right particle -->
+        <circle cx="600" cy="160" r="8" fill="#5b7cf5"/>
+        <line x1="460" y1="160" x2="590" y2="160" stroke="#5b7cf5" stroke-width="1" stroke-dasharray="2 3" opacity="0.5"/>
+        <text x="600" y="140" class="lbl" text-anchor="middle">PARTICLE 2</text>
+        <text x="600" y="190" class="lbl-soft" text-anchor="middle">flying right</text>
+
+        <!-- distance arrow -->
+        <line x1="40" y1="100" x2="840" y2="100" class="stroke" marker-end="url(#ch1f1-arr)"/>
+        <line x1="840" y1="100" x2="40" y2="100" class="stroke" marker-end="url(#ch1f1-arr)"/>
+        <text x="440" y="92" class="lbl-soft" text-anchor="middle">they fly far apart — metres, kilometres, light-years, doesn't matter</text>
+
+        <text x="24" y="265" class="lbl-soft">FIG. 1.1 · TWO PARTICLES, ONE SOURCE</text>
+      </svg>
+      <figcaption><span class="figno">FIG. 1.1</span> A small device on a table emits two particles, one to each side, every time we press the button. We let them fly off until they're nowhere near each other any more.</figcaption>
+    </figure>
+
+
+    <!-- ============== §1.2 DIAL AND LIGHT ============== -->
+    <h2 id="dial"><span class="num">§1.2</span>A dial and a light</h2>
+
+    <p>
+      Far from the source, on each side, there is a measurement box. Inside each box, the particle is fed into a piece of equipment that has two parts:
+    </p>
+
+    <ul style="line-height:1.7;">
+      <li>A <strong>dial</strong>. The scientist running the box can turn this dial to any angle they like — 0°, 17°, 90°, anything. Set it before the particle arrives.</li>
+      <li>A <strong>light</strong>. After the particle goes through, the light flashes one of two colours. We'll call them <span style="color:#f6802b;">▲ up</span> and <span style="color:#2347d9;">▼ down</span>.</li>
+    </ul>
+
+    <p>
+      That's the whole apparatus. <strong>Nothing else comes out of the box.</strong> No number, no degree, no continuous reading. Just a single binary flash: up or down. The dial is the only thing the scientist gets to choose; the flash is the only thing they observe.
+    </p>
+
+    <figure>
+      <svg class="diag" viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ch1f2-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" class="fill"/>
+          </marker>
+        </defs>
+
+        <text x="24" y="28" class="lbl-big">INSIDE EACH BOX — A DIAL AND A LIGHT</text>
+        <text x="24" y="44" class="lbl-soft">THE SCIENTIST CHOOSES THE DIAL ANGLE; THE PARTICLE CAUSES THE LIGHT TO FLASH UP OR DOWN</text>
+        <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
+
+        <!-- box outline -->
+        <rect x="120" y="100" width="640" height="220" class="stroke-2 fill-soft" rx="8"/>
+        <text x="440" y="92" class="lbl-big" text-anchor="middle">ALICE'S BOX (BOB'S IS IDENTICAL)</text>
+
+        <!-- particle entry -->
+        <line x1="60" y1="200" x2="120" y2="200" class="stroke-2" stroke-dasharray="3 3" marker-end="url(#ch1f2-arr)"/>
+        <circle cx="80" cy="200" r="6" fill="#5b7cf5"/>
+        <text x="80" y="180" class="lbl" text-anchor="middle">PARTICLE</text>
+        <text x="80" y="226" class="lbl-soft" text-anchor="middle">arriving</text>
+
+        <!-- the dial -->
+        <g transform="translate(280,200)">
+          <circle r="60" class="stroke-2" fill="#fff"/>
+          <circle r="58" stroke="#cfd5e8" fill="none"/>
+          <!-- ticks at 0, 45, 90, 135, 180 -->
+          <line x1="0" y1="-58" x2="0" y2="-50" class="stroke"/>
+          <line x1="41" y1="-41" x2="35" y2="-35" class="stroke"/>
+          <line x1="58" y1="0" x2="50" y2="0" class="stroke"/>
+          <line x1="41" y1="41" x2="35" y2="35" class="stroke"/>
+          <line x1="0" y1="58" x2="0" y2="50" class="stroke"/>
+          <line x1="-41" y1="41" x2="-35" y2="35" class="stroke"/>
+          <line x1="-58" y1="0" x2="-50" y2="0" class="stroke"/>
+          <line x1="-41" y1="-41" x2="-35" y2="-35" class="stroke"/>
+          <text x="0" y="-65" class="lbl-soft" text-anchor="middle">0°</text>
+          <text x="65" y="3" class="lbl-soft">90°</text>
+          <text x="-67" y="3" class="lbl-soft" text-anchor="end">270°</text>
+          <text x="0" y="76" class="lbl-soft" text-anchor="middle">180°</text>
+          <!-- pointer -->
+          <line x1="0" y1="0" x2="40" y2="-40" stroke="#c64545" stroke-width="3" marker-end="url(#ch1f2-arr)"/>
+          <circle r="4" class="fill"/>
+          <text x="0" y="100" class="lbl" text-anchor="middle">DIAL</text>
+          <text x="0" y="114" class="lbl-soft" text-anchor="middle">scientist sets the angle</text>
+          <text x="0" y="128" class="lbl-soft" text-anchor="middle">before the particle arrives</text>
+        </g>
+
+        <!-- arrow from dial to light -->
+        <line x1="360" y1="200" x2="500" y2="200" class="stroke-2" marker-end="url(#ch1f2-arr)"/>
+
+        <!-- the light -->
+        <g transform="translate(580,200)">
+          <circle r="50" class="stroke-2" fill="#fffbea"/>
+          <text x="0" y="6" class="lbl-big" text-anchor="middle" style="fill:#f6802b; font-size:24px;">▲</text>
+          <text x="0" y="80" class="lbl" text-anchor="middle">LIGHT</text>
+          <text x="0" y="94" class="lbl-soft" text-anchor="middle">flashes ▲ or ▼</text>
+          <text x="0" y="108" class="lbl-soft" text-anchor="middle">when particle is measured</text>
+        </g>
+
+        <!-- two outcomes shown -->
+        <g transform="translate(680,160)">
+          <circle r="14" class="stroke" fill="#fff5e6"/>
+          <text x="0" y="4" class="lbl-big" text-anchor="middle" style="fill:#f6802b;">▲</text>
+          <text x="0" y="24" class="lbl-soft" text-anchor="middle">"up"</text>
+        </g>
+        <g transform="translate(680,232)">
+          <circle r="14" class="stroke" fill="#eef2ff"/>
+          <text x="0" y="4" class="lbl-big" text-anchor="middle" style="fill:#2347d9;">▼</text>
+          <text x="0" y="24" class="lbl-soft" text-anchor="middle">"down"</text>
+        </g>
+
+        <text x="24" y="365" class="lbl-soft">FIG. 1.2 · ONE BOX, ONE PARTICLE, ONE FLASH</text>
+      </svg>
+      <figcaption><span class="figno">FIG. 1.2</span> Each box has a dial the scientist chooses in advance, and a light that flashes once the particle is measured. The single piece of information that comes out of every measurement is "▲" or "▼". That's it.</figcaption>
+    </figure>
+
+    <p>
+      Two scientists run two such boxes — Alice on one side of the lab, Bob on the other. They press the button on the source. A pair of particles flies out. Alice's particle goes left, Bob's goes right. Both boxes flash. Alice writes down what her dial was set to and which way her light flashed; Bob does the same on his side. They press the button again. And again. Thousands of times.
+    </p>
+
+
+    <!-- ============== §1.3 CORRELATION ============== -->
+    <h2 id="correlation"><span class="num">§1.3</span>Comparing results</h2>
+
+    <p>
+      At the end of the day, Alice and Bob meet up and compare their notebooks. They are not interested in their individual flashes — Alice's flashes come out roughly half-up, half-down regardless of where she set her dial, and so do Bob's. There is no pattern visible to <em>either of them alone</em>.
+    </p>
+
+    <p>
+      What is interesting is the comparison <em>between</em> them. They line up their notebooks trial by trial and ask: when both of them set their dials to the same angle, did their lights flash the same way, or different ways?
+    </p>
+
+    <figure>
+      <svg class="diag" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg">
+        <text x="24" y="28" class="lbl-big">SAME-DIAL TRIALS — THEIR LIGHTS ALWAYS FLASH OPPOSITELY</text>
+        <text x="24" y="44" class="lbl-soft">WHENEVER ALICE AND BOB CHOOSE THE SAME DIAL ANGLE, EVERY SINGLE TRIAL ALICE = ▲ MEANS BOB = ▼ AND VICE VERSA</text>
+        <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
+
+        <!-- table headers -->
+        <text x="60" y="92" class="lbl">TRIAL #</text>
+        <text x="220" y="92" class="lbl">ALICE'S DIAL</text>
+        <text x="380" y="92" class="lbl">ALICE'S FLASH</text>
+        <text x="540" y="92" class="lbl">BOB'S DIAL</text>
+        <text x="700" y="92" class="lbl">BOB'S FLASH</text>
+        <line x1="40" y1="100" x2="840" y2="100" class="stroke-soft"/>
+
+        <!-- rows -->
+        <g transform="translate(0,128)">
+          <text x="60" y="0" class="body">1</text>
+          <text x="220" y="0" class="body">30°</text>
+          <text x="380" y="0" class="lbl-big" style="fill:#f6802b;">▲</text>
+          <text x="540" y="0" class="body">30°</text>
+          <text x="700" y="0" class="lbl-big" style="fill:#2347d9;">▼</text>
+        </g>
+        <g transform="translate(0,156)">
+          <text x="60" y="0" class="body">2</text>
+          <text x="220" y="0" class="body">30°</text>
+          <text x="380" y="0" class="lbl-big" style="fill:#2347d9;">▼</text>
+          <text x="540" y="0" class="body">30°</text>
+          <text x="700" y="0" class="lbl-big" style="fill:#f6802b;">▲</text>
+        </g>
+        <g transform="translate(0,184)">
+          <text x="60" y="0" class="body">3</text>
+          <text x="220" y="0" class="body">30°</text>
+          <text x="380" y="0" class="lbl-big" style="fill:#2347d9;">▼</text>
+          <text x="540" y="0" class="body">30°</text>
+          <text x="700" y="0" class="lbl-big" style="fill:#f6802b;">▲</text>
+        </g>
+        <g transform="translate(0,212)">
+          <text x="60" y="0" class="body">4</text>
+          <text x="220" y="0" class="body">30°</text>
+          <text x="380" y="0" class="lbl-big" style="fill:#f6802b;">▲</text>
+          <text x="540" y="0" class="body">30°</text>
+          <text x="700" y="0" class="lbl-big" style="fill:#2347d9;">▼</text>
+        </g>
+        <g transform="translate(0,240)">
+          <text x="60" y="0" class="body">5</text>
+          <text x="220" y="0" class="body">30°</text>
+          <text x="380" y="0" class="lbl-big" style="fill:#2347d9;">▼</text>
+          <text x="540" y="0" class="body">30°</text>
+          <text x="700" y="0" class="lbl-big" style="fill:#f6802b;">▲</text>
+        </g>
+        <g transform="translate(0,268)">
+          <text x="60" y="0" class="body">…</text>
+          <text x="220" y="0" class="body">…</text>
+          <text x="380" y="0" class="body">…</text>
+          <text x="540" y="0" class="body">…</text>
+          <text x="700" y="0" class="body">…</text>
+        </g>
+
+        <line x1="40" y1="290" x2="840" y2="290" class="stroke-soft"/>
+        <text x="60" y="318" class="lbl">RESULT</text>
+        <text x="220" y="318" class="body">Alice and Bob always get <em>opposite</em> flashes — 100% of the time — when their dials match.</text>
+
+        <text x="24" y="345" class="lbl-soft">FIG. 1.3 · MATCHING-DIAL TRIALS</text>
+      </svg>
+      <figcaption><span class="figno">FIG. 1.3</span> The first surprising fact: whenever Alice and Bob choose the same dial setting, their lights flash <em>oppositely</em> on every single trial. ▲ on her side guarantees ▼ on his. They are perfectly anti-matched.</figcaption>
+    </figure>
+
+    <p>
+      That alone isn't the strange part — we'll see in the next chapter that there's a very simple "cheat" that could explain it. The strange part is what happens when the dials <em>don't</em> match. As Alice and Bob start using <em>different</em> angles on the two sides, the matching breaks down — but it breaks down in a precise pattern. The pattern depends only on the <strong>angle between the two dials</strong>.
+    </p>
+
+    <figure>
+      <svg class="diag" viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg">
+        <text x="24" y="28" class="lbl-big">THE PATTERN — HOW OFTEN THEIR FLASHES MATCH, BY DIAL DIFFERENCE</text>
+        <text x="24" y="44" class="lbl-soft">"MATCH" = BOTH ▲ OR BOTH ▼ · "MISMATCH" = ONE ▲ AND ONE ▼</text>
+        <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
+
+        <!-- axes -->
+        <line x1="80" y1="320" x2="820" y2="320" class="stroke-2"/>
+        <line x1="80" y1="100" x2="80" y2="320" class="stroke-2"/>
+
+        <!-- y axis labels -->
+        <text x="68" y="104" class="lbl-soft" text-anchor="end">100% match</text>
+        <text x="68" y="214" class="lbl-soft" text-anchor="end">50/50</text>
+        <text x="68" y="324" class="lbl-soft" text-anchor="end">0% match</text>
+        <line x1="76" y1="210" x2="84" y2="210" class="stroke"/>
+
+        <!-- x axis labels -->
+        <line x1="80" y1="316" x2="80" y2="324" class="stroke"/>
+        <line x1="265" y1="316" x2="265" y2="324" class="stroke"/>
+        <line x1="450" y1="316" x2="450" y2="324" class="stroke"/>
+        <line x1="635" y1="316" x2="635" y2="324" class="stroke"/>
+        <line x1="820" y1="316" x2="820" y2="324" class="stroke"/>
+        <text x="80" y="338" class="lbl-soft" text-anchor="middle">0°</text>
+        <text x="265" y="338" class="lbl-soft" text-anchor="middle">45°</text>
+        <text x="450" y="338" class="lbl-soft" text-anchor="middle">90°</text>
+        <text x="635" y="338" class="lbl-soft" text-anchor="middle">135°</text>
+        <text x="820" y="338" class="lbl-soft" text-anchor="middle">180°</text>
+        <text x="450" y="358" class="lbl">DIAL DIFFERENCE</text>
+
+        <!-- the curve: matches go from 0% at 0° (always opposite) to 100% at 180° (always same) -->
+        <path d="M 80 320 C 200 314 280 280 360 240 C 460 192 540 140 820 100" stroke="#2347d9" fill="none" stroke-width="2.4"/>
+
+        <!-- key points -->
+        <circle cx="80" cy="320" r="5" fill="#2347d9"/>
+        <text x="100" y="312" class="lbl-soft">SAME DIAL → ALWAYS OPPOSITE → 0% MATCH</text>
+
+        <circle cx="450" cy="210" r="5" fill="#2347d9"/>
+        <text x="460" y="200" class="lbl-soft">DIALS 90° APART → 50% MATCH (PURE COIN FLIP)</text>
+
+        <circle cx="820" cy="100" r="5" fill="#2347d9"/>
+        <text x="816" y="92" class="lbl-soft" text-anchor="end">DIALS OPPOSITE → ALWAYS SAME → 100% MATCH</text>
+
+        <text x="24" y="370" class="lbl-soft">FIG. 1.4 · MATCH RATE VS DIAL DIFFERENCE — THE SHAPE OF THE PUZZLE</text>
+      </svg>
+      <figcaption><span class="figno">FIG. 1.4</span> The match rate isn't a straight line — it's a smooth curve. At 0° (same dial) the lights are always opposite; at 90° they match exactly half the time; at 180° they always match. In between, the curve is shaped like a half-cosine. <strong>This curve is the puzzle.</strong></figcaption>
+    </figure>
+
+    <div class="callout">
+      <span class="tag">Why this curve specifically</span>
+      <p>
+        The shape of the curve isn't an experimental accident. Quantum mechanics <em>predicts</em> exactly this shape: at angle θ, the lights match a fraction <span class="math-inline">sin²(θ/2)</span> of the time. (You don't need the formula — just the picture: smooth, rising, with the values 0%, 50%, 100% at 0°, 90°, 180°.) The whole drama of Bell's paper is whether any "common-sense" theory could produce <em>this same curve</em>. Spoiler: no.
+      </p>
+    </div>
+
+
+    <!-- ============== §1.4 EINSTEIN ============== -->
+    <h2 id="einstein"><span class="num">§1.4</span>What bothered Einstein</h2>
+
+    <p>
+      Einstein looked at this experiment in 1935, with two collaborators (Boris Podolsky and Nathan Rosen), and felt something was deeply wrong with quantum mechanics. His worry went like this:
+    </p>
+
+    <p>
+      Suppose Alice sets her dial to 30° and her light flashes ▲. We <em>already know</em>, from the same-dial trials, that if Bob's dial is also at 30° his light <em>must</em> flash ▼. So the answer to "what would Bob's box have done at 30°" is determined the moment Alice's box flashes — even if Bob's box is on Mars and Alice's box is on Earth.
+    </p>
+
+    <p>
+      Einstein's question: how does Bob's particle <em>know</em> what to do? Two options:
+    </p>
+
+    <ol style="line-height:1.7;">
+      <li>The particle was carrying its answer all along — like a sealed envelope it had with it from the moment it left the source. Alice's measurement just reveals which envelope she happened to get; Bob's particle has the matching one. <strong>Boring, classical, sensible.</strong> This is the "hidden variable" or "secret tag" idea.</li>
+      <li>The act of Alice measuring her particle <em>somehow</em> reaches across space and tells Bob's particle what to flash. <strong>Faster than light. Spooky.</strong> Einstein famously called this "spooky action at a distance" and dismissed it.</li>
+    </ol>
+
+    <p>
+      Einstein, naturally, preferred option 1. He concluded that quantum mechanics must therefore be incomplete — the theory simply hadn't yet figured out what was written on the envelopes. Add the "hidden variables," and the spookiness goes away.
+    </p>
+
+    <p>
+      For thirty years, this looked like a philosophical question that physics couldn't answer. Then in 1964 John Bell did something nobody had thought possible: he found an experiment that distinguishes between option 1 and option 2. The next two chapters walk through it.
+    </p>
+
+
+    <div class="pagenav">
+      <a href="index.html">← Cover<span class="nm">A visual reading</span></a>
+      <a href="chapter-2.html">Next →<span class="nm">2 · The glove analogy</span></a>
+    </div>
+
+  </article>
+
+  <div class="margin-tag">
+    <span class="top">ON THE EINSTEIN PODOLSKY ROSEN PARADOX</span>
+    <span class="mid">CHAPTER 1 · THE PUZZLE</span>
+    <span class="bot">FIG. 1.1 — 1.4</span>
+  </div>
+
+</main>
+
+</body>
+</html>

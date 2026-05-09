@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+*.pid
+.env
+.env.local
+.env.*.local
+.vercel/
+*.swp
+*~
+.codex/
+codex-*.log

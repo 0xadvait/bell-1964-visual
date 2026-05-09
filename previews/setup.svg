@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" ><style>.stroke{stroke:#2347d9;fill:none;stroke-width:1.2}.stroke-2{stroke:#2347d9;fill:none;stroke-width:1.8}.stroke-soft{stroke:#93a8f0;fill:none;stroke-width:1}.fill{fill:#2347d9}.fill-soft{fill:#eef2ff}.lead{stroke:#2347d9;fill:none;stroke-width:0.8}.dashed{stroke:#2347d9;fill:none;stroke-width:0.8;stroke-dasharray:3 3}.grid{stroke:#d8e0f5;fill:none;stroke-width:0.5}.lbl{font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:9.5px;fill:#2347d9;letter-spacing:0.06em;text-transform:uppercase}.lbl-soft{font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:9px;fill:#9ca3af;letter-spacing:0.06em;text-transform:uppercase}.lbl-big{font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-size:11px;fill:#2347d9;letter-spacing:0.06em;text-transform:uppercase;font-weight:600}.body{font-family:'Iowan Old Style',Palatino,Georgia,serif;font-size:11px;fill:#1f2937}</style><rect width="100%" height="100%" fill="#fffdf6"/>
+          <defs>
+            <marker id="cov-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="fill"/>
+            </marker>
+            <radialGradient id="cov-glow" cx="0.5" cy="0.5">
+              <stop offset="0%" stop-color="#ffd29e" stop-opacity="0.95"/>
+              <stop offset="100%" stop-color="#f6802b" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <text x="28" y="30" class="lbl-big">THE WHOLE EXPERIMENT IN ONE PICTURE</text>
+          <text x="28" y="46" class="lbl-soft">A SOURCE EMITS TWO PARTICLES. EACH GOES INTO ITS OWN BOX. EACH BOX HAS A DIAL AND A LIGHT.</text>
+          <line x1="28" y1="58" x2="892" y2="58" class="stroke-soft"/>
+
+          <!-- the source -->
+          <circle cx="460" cy="260" r="50" fill="url(#cov-glow)"/>
+          <circle cx="460" cy="260" r="18" class="stroke-2 fill-soft"/>
+          <text x="460" y="265" class="lbl" text-anchor="middle">SOURCE</text>
+          <text x="460" y="334" class="lbl-soft" text-anchor="middle">emits a special pair of particles</text>
+          <text x="460" y="348" class="lbl-soft" text-anchor="middle">that "remember" each other</text>
+
+          <!-- left arrow -->
+          <line x1="442" y1="260" x2="280" y2="260" class="stroke-2" stroke-dasharray="4 3" marker-end="url(#cov-arr)"/>
+          <text x="360" y="252" class="lbl-soft" text-anchor="middle">particle 1</text>
+
+          <!-- right arrow -->
+          <line x1="478" y1="260" x2="640" y2="260" class="stroke-2" stroke-dasharray="4 3" marker-end="url(#cov-arr)"/>
+          <text x="560" y="252" class="lbl-soft" text-anchor="middle">particle 2</text>
+
+          <!-- LEFT BOX (Alice) -->
+          <g transform="translate(60,160)">
+            <rect x="0" y="0" width="220" height="180" class="stroke-2 fill-soft" rx="6"/>
+            <text x="110" y="-10" class="lbl-big" text-anchor="middle">ALICE'S BOX</text>
+
+            <!-- particle entry -->
+            <line x1="220" y1="100" x2="240" y2="100" class="stroke" marker-end="url(#cov-arr)"/>
+            <text x="232" y="92" class="lbl-soft" text-anchor="middle"></text>
+
+            <!-- dial -->
+            <circle cx="70" cy="70" r="32" class="stroke-2" fill="#fff"/>
+            <line x1="70" y1="70" x2="92" y2="48" stroke="#c64545" stroke-width="2.4" marker-end="url(#cov-arr)"/>
+            <circle cx="70" cy="70" r="3" class="fill"/>
+            <text x="70" y="124" class="lbl" text-anchor="middle">DIAL</text>
+            <text x="70" y="138" class="lbl-soft" text-anchor="middle">choose 0°, 45°, 90°…</text>
+
+            <!-- light bulb -->
+            <circle cx="160" cy="70" r="20" class="stroke-2" fill="#fffbea"/>
+            <text x="160" y="74" class="lbl-big" text-anchor="middle" style="fill:#f6802b;">↑</text>
+            <text x="160" y="124" class="lbl" text-anchor="middle">LIGHT</text>
+            <text x="160" y="138" class="lbl-soft" text-anchor="middle">flashes ↑ or ↓</text>
+          </g>
+
+          <!-- RIGHT BOX (Bob) -->
+          <g transform="translate(640,160)">
+            <rect x="0" y="0" width="220" height="180" class="stroke-2 fill-soft" rx="6"/>
+            <text x="110" y="-10" class="lbl-big" text-anchor="middle">BOB'S BOX</text>
+
+            <line x1="-20" y1="100" x2="0" y2="100" class="stroke" marker-end="url(#cov-arr)"/>
+
+            <circle cx="70" cy="70" r="32" class="stroke-2" fill="#fff"/>
+            <line x1="70" y1="70" x2="48" y2="92" stroke="#c64545" stroke-width="2.4" marker-end="url(#cov-arr)"/>
+            <circle cx="70" cy="70" r="3" class="fill"/>
+            <text x="70" y="124" class="lbl" text-anchor="middle">DIAL</text>
+            <text x="70" y="138" class="lbl-soft" text-anchor="middle">choose 0°, 45°, 90°…</text>
+
+            <circle cx="160" cy="70" r="20" class="stroke-2" fill="#fffbea"/>
+            <text x="160" y="78" class="lbl-big" text-anchor="middle" style="fill:#2347d9;">↓</text>
+            <text x="160" y="124" class="lbl" text-anchor="middle">LIGHT</text>
+            <text x="160" y="138" class="lbl-soft" text-anchor="middle">flashes ↑ or ↓</text>
+          </g>
+
+          <!-- bottom narrative -->
+          <g transform="translate(80,400)">
+            <text x="0" y="0" class="lbl-big">THE PUZZLE</text>
+            <text x="0" y="20" class="body">Alice and Bob each turn their dial to whatever angle they like. Each then sees their light flash up or down. They do this thousands</text>
+            <text x="0" y="36" class="body">of times. When they later compare notes, they find their results are <em>weirdly correlated</em> — in a way that no story about</text>
+            <text x="0" y="52" class="body">"the particles secretly carried instructions when they left the source" can explain. That weirdness is what Bell proved.</text>
+          </g>
+
+          <text x="892" y="465" class="lbl-soft" text-anchor="end">FIG. 0 · THE WHOLE BOOK IN ONE DIAGRAM</text>
+        </svg>

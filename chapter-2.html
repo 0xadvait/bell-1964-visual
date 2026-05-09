@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2 · The glove analogy — A visual reading of Bell 1964</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="linkbar">
+  <div class="group">
+    <span class="lbl-tag">Source</span>
+    <a href="https://journals.aps.org/ppf/abstract/10.1103/PhysicsPhysiqueFizika.1.195" target="_blank" rel="noopener">Paper · APS Journals<span class="arrow">↗</span></a>
+    <a href="https://en.wikipedia.org/wiki/John_Stewart_Bell" target="_blank" rel="noopener">Author · J. S. Bell<span class="arrow">↗</span></a>
+  </div>
+  <div class="group">
+    <span class="lbl-tag">Built by</span>
+    <a href="https://github.com/0xadvait" target="_blank" rel="noopener">GitHub · @0xadvait<span class="arrow">↗</span></a>
+    <a href="https://x.com/advait_jayant" target="_blank" rel="noopener">X · @advait_jayant<span class="arrow">↗</span></a>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="brand">A visual reading of <em>On the Einstein Podolsky Rosen Paradox</em> — J. S. Bell, 1964</div>
+  <div class="crumbs">
+    <a href="index.html">Cover</a> ·
+    <a href="chapter-1.html">1 · The puzzle</a> ·
+    <a href="chapter-2.html" class="current">2 · The glove analogy</a> ·
+    <a href="chapter-3.html">3 · The clever experiment</a> ·
+    <a href="chapter-4.html">4 · What it means</a> ·
+    <a href="terminology.html">Terms</a>
+  </div>
+</header>
+
+<main class="shell">
+
+  <aside class="toc">
+    <h3>Chapter 2</h3>
+    <ol style="counter-reset: none;">
+      <li style="counter-increment: none;"><a href="#gloves">Gloves in boxes</a></li>
+      <li style="counter-increment: none;"><a href="#tag">The "secret tag" idea</a></li>
+      <li style="counter-increment: none;"><a href="#almost">When it almost works</a></li>
+    </ol>
+    <h3 style="margin-top:24px;">Other chapters</h3>
+    <ol>
+      <li><a href="chapter-1.html">The puzzle</a></li>
+      <li><a href="chapter-2.html">The glove analogy</a></li>
+      <li><a href="chapter-3.html">The clever experiment</a></li>
+      <li><a href="chapter-4.html">What it means</a></li>
+    </ol>
+    <h3 style="margin-top:24px;"><a href="terminology.html" style="color:var(--blue);">Terms →</a></h3>
+  </aside>
+
+  <article class="content">
+
+    <h1><span class="num">CHAPTER 2</span>The glove analogy</h1>
+    <p class="deck">
+      The boring explanation: each particle carries its answers with it, like a sealed envelope. Let's see how far this idea gets us.
+    </p>
+
+
+    <!-- ============== §2.1 GLOVES ============== -->
+    <h2 id="gloves"><span class="num">§2.1</span>Gloves in boxes</h2>
+
+    <p>
+      Forget particles for a moment. Imagine instead that I have a pair of gloves — one left, one right. I put each glove in an identical-looking sealed box, shake both boxes around, and post one to Alice in London and the other to Bob in Tokyo. Neither of them knows which glove they are getting.
+    </p>
+
+    <p>
+      Alice opens her box first. She finds, say, a left glove. <em>Instantly</em>, without anything reaching across the world, she knows Bob's glove is the right one. If Bob's box is then opened, sure enough — right glove. The "correlation" between their results is perfect. They always get opposite gloves.
+    </p>
+
+    <figure>
+      <svg class="diag" viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="ch2f1-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" class="fill"/>
+          </marker>
+        </defs>
+
+        <text x="24" y="28" class="lbl-big">PERFECTLY CORRELATED, NOTHING SPOOKY</text>
+        <text x="24" y="44" class="lbl-soft">A LEFT GLOVE AND A RIGHT GLOVE, MAILED IN IDENTICAL BOXES</text>
+        <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
+
+        <!-- Alice's box, opened, with left glove -->
+        <g transform="translate(80,120)">
+          <rect x="0" y="0" width="140" height="100" class="stroke-2 fill-soft" rx="6"/>
+          <!-- glove silhouette (left) -->
+          <path d="M 50 70 Q 50 50 60 50 L 60 35 Q 60 25 70 25 L 70 35 L 78 35 L 78 25 Q 78 18 86 18 L 86 35 L 92 35 L 92 50 Q 100 55 100 70 L 100 85 L 50 85 Z" class="stroke fill-soft"/>
+          <text x="70" y="-10" class="lbl-big" text-anchor="middle">ALICE</text>
+          <text x="70" y="120" class="lbl" text-anchor="middle">left glove</text>
+          <text x="70" y="134" class="lbl-soft" text-anchor="middle">opened in London</text>
+        </g>
+
+        <!-- Bob's box, opened, with right glove (mirrored) -->
+        <g transform="translate(660,120)">
+          <rect x="0" y="0" width="140" height="100" class="stroke-2 fill-soft" rx="6"/>
+          <path d="M 90 70 Q 90 50 80 50 L 80 35 Q 80 25 70 25 L 70 35 L 62 35 L 62 25 Q 62 18 54 18 L 54 35 L 48 35 L 48 50 Q 40 55 40 70 L 40 85 L 90 85 Z" class="stroke fill-soft"/>
+          <text x="70" y="-10" class="lbl-big" text-anchor="middle">BOB</text>
+          <text x="70" y="120" class="lbl" text-anchor="middle">right glove</text>
+          <text x="70" y="134" class="lbl-soft" text-anchor="middle">opened in Tokyo</text>
+        </g>
+
+        <!-- distance arrow with label -->
+        <line x1="220" y1="170" x2="660" y2="170" class="stroke" stroke-dasharray="3 3" marker-end="url(#ch2f1-arr)"/>
+        <line x1="660" y1="170" x2="220" y2="170" class="stroke" stroke-dasharray="3 3" marker-end="url(#ch2f1-arr)"/>
+        <text x="440" y="160" class="lbl-soft" text-anchor="middle">10,000 km — and yet always opposite</text>
+        <text x="440" y="194" class="lbl-soft" text-anchor="middle" style="fill:#2347d9;">no signal needs to travel between them</text>
+
+        <text x="24" y="265" class="lbl-soft">FIG. 2.1 · CLASSICAL CORRELATION</text>
+      </svg>
+      <figcaption><span class="figno">FIG. 2.1</span> Nothing in this story violates physics. The "instant" correlation is just the fact that the two gloves were <em>already</em> a left-right pair the moment they left my hands. The information was carried in the boxes; reading one tells you about the other because they share a common origin.</figcaption>
+    </figure>
+
+    <p>
+      This is the boring explanation Einstein wanted for the EPR experiment. Maybe each pair of particles is like a left-right glove pair — each particle leaves the source already carrying a complete instruction sheet for what to do at any dial setting it might encounter. When Alice's box flashes ▲, that's just her opening her envelope and reading what was written inside; Bob's particle has the matching instruction sheet, so his box flashes ▼.
+    </p>
+
+    <p>
+      No spooky communication. No faster-than-light signalling. Just a shared origin and a sealed envelope. <strong>This is what physicists call a "local hidden-variable theory"</strong> — "local" because nothing crosses the gap between Alice and Bob; "hidden variables" because there are extra properties (the envelope contents) that quantum mechanics didn't bother to track.
+    </p>
+
+
+    <!-- ============== §2.2 SECRET TAG ============== -->
+    <h2 id="tag"><span class="num">§2.2</span>The "secret tag" idea, in detail</h2>
+
+    <p>
+      Let's try to build a hidden-variable theory that actually reproduces the experiment. We need to specify, for every particle, what its "envelope" says. The envelope has to give the answer for <em>any</em> dial setting Alice might choose — 0°, 17°, 90°, 113°, anything — because she can choose late in the game.
+    </p>
+
+    <p>
+      Here's a simple proposal. Each particle carries one number — an angle, let's call it the particle's <strong>secret tag</strong>. When the particle reaches a measurement box, the box compares its dial setting to the secret tag and flashes ▲ or ▼ depending on whether the dial points "near" or "far" from the tag.
+    </p>
+
+    <figure>
+      <svg class="diag" viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg">
+        <text x="24" y="28" class="lbl-big">A SIMPLE HIDDEN-VARIABLE MODEL</text>
+        <text x="24" y="44" class="lbl-soft">EACH PARTICLE CARRIES A SECRET ANGLE λ. THE BOX FLASHES ▲ IF DIAL IS ON λ'S SIDE, ▼ IF ON THE OPPOSITE SIDE.</text>
+        <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
+
+        <!-- a circle representing all possible angles -->
+        <g transform="translate(440,200)">
+          <circle r="100" class="stroke-2" fill="#fff"/>
+          <!-- Alice's dial direction -->
+          <line x1="0" y1="0" x2="0" y2="-100" stroke="#c64545" stroke-width="2.4"/>
+          <text x="0" y="-110" class="lbl" text-anchor="middle" style="fill:#c64545;">ALICE'S DIAL</text>
+
+          <!-- the secret tag direction (somewhere) -->
+          <line x1="0" y1="0" x2="64" y2="-77" stroke="#2347d9" stroke-width="2.4" stroke-dasharray="3 3"/>
+          <text x="74" y="-82" class="lbl" style="fill:#2347d9;">SECRET TAG λ</text>
+
+          <!-- shaded "▲ side" -->
+          <path d="M 0 0 L 0 -100 A 100 100 0 0 1 100 0 Z" fill="#fee" opacity="0.5"/>
+          <path d="M 0 0 L 100 0 A 100 100 0 0 1 0 100 Z" fill="#fee" opacity="0.5"/>
+          <text x="62" y="62" class="lbl-soft" style="fill:#c64545;">"▲" side</text>
+
+          <!-- ▼ side -->
+          <path d="M 0 0 L 0 100 A 100 100 0 0 1 -100 0 Z" fill="#eef" opacity="0.5"/>
+          <path d="M 0 0 L -100 0 A 100 100 0 0 1 0 -100 Z" fill="#eef" opacity="0.5"/>
+          <text x="-62" y="-50" class="lbl-soft" style="fill:#2347d9;">"▼" side</text>
+
+          <!-- dot at origin -->
+          <circle r="3" class="fill"/>
+        </g>
+
+        <!-- legend / rule -->
+        <g transform="translate(40,210)">
+          <text x="0" y="0" class="lbl-big">RULE</text>
+          <text x="0" y="20" class="body">If the secret tag λ falls within</text>
+          <text x="0" y="36" class="body">90° of the dial → flash ▲</text>
+          <text x="0" y="56" class="body">If λ is on the opposite half → flash ▼</text>
+        </g>
+
+        <g transform="translate(700,210)">
+          <text x="0" y="0" class="lbl-big">PARTICLE 2</text>
+          <text x="0" y="20" class="body">Carries λ + 180°</text>
+          <text x="0" y="36" class="body">(the opposite secret tag).</text>
+          <text x="0" y="56" class="body">Same rule applies in Bob's box.</text>
+        </g>
+
+        <text x="24" y="365" class="lbl-soft">FIG. 2.2 · ONE WAY TO IMAGINE A HIDDEN-VARIABLE MODEL</text>
+      </svg>
+      <figcaption><span class="figno">FIG. 2.2</span> One simple hidden-variable proposal: each particle has a secret angle λ. The measurement box flashes ▲ if λ falls in the half-circle "near" the dial, and ▼ in the other half. The two particles in a pair carry opposite secret angles, so when Alice and Bob set the same dial, their flashes are guaranteed opposite.</figcaption>
+    </figure>
+
+    <p>
+      For Alice and Bob's <em>same-dial</em> trials, this model gives perfect anti-matching, which is exactly what the experiment shows. So far, so good. The "secret tag" theory passes the easy test.
+    </p>
+
+
+    <!-- ============== §2.3 ALMOST ============== -->
+    <h2 id="almost"><span class="num">§2.3</span>When it almost works</h2>
+
+    <p>
+      Now let Alice and Bob choose <em>different</em> dial angles, and let's count up how often they match. Take many particle pairs, with the secret tag λ pointing in random directions evenly. Walk through the geometry:
+    </p>
+
+    <ul style="line-height:1.7;">
+      <li>If Alice's dial is at 0° and Bob's is at 0° (no difference): they always anti-match. Match rate = 0%.</li>
+      <li>If Alice's dial is at 0° and Bob's at 90°: each independently splits the circle in half, and the splits don't agree. Match rate = 50%.</li>
+      <li>If Alice's at 0° and Bob's at 180°: they always match. Match rate = 100%.</li>
+      <li>For an angle in between, the match rate depends linearly on the angle. The full curve is a <strong>straight line</strong> from 0% at 0° to 100% at 180°.</li>
+    </ul>
+
+    <figure>
+      <svg class="diag" viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg">
+        <text x="24" y="28" class="lbl-big">SECRET-TAG MATCH RATE — A STRAIGHT LINE</text>
+        <text x="24" y="44" class="lbl-soft">RED LINE = WHAT THE GLOVE/SECRET-TAG MODEL PREDICTS · BLUE CURVE = WHAT THE EXPERIMENT ACTUALLY SHOWS</text>
+        <line x1="24" y1="58" x2="856" y2="58" class="stroke-soft"/>
+
+        <!-- axes -->
+        <line x1="80" y1="320" x2="820" y2="320" class="stroke-2"/>
+        <line x1="80" y1="100" x2="80" y2="320" class="stroke-2"/>
+
+        <text x="68" y="104" class="lbl-soft" text-anchor="end">100% match</text>
+        <text x="68" y="214" class="lbl-soft" text-anchor="end">50/50</text>
+        <text x="68" y="324" class="lbl-soft" text-anchor="end">0% match</text>
+        <line x1="76" y1="210" x2="84" y2="210" class="stroke"/>
+
+        <line x1="80" y1="316" x2="80" y2="324" class="stroke"/>
+        <line x1="265" y1="316" x2="265" y2="324" class="stroke"/>
+        <line x1="450" y1="316" x2="450" y2="324" class="stroke"/>
+        <line x1="635" y1="316" x2="635" y2="324" class="stroke"/>
+        <line x1="820" y1="316" x2="820" y2="324" class="stroke"/>
+        <text x="80" y="338" class="lbl-soft" text-anchor="middle">0°</text>
+        <text x="265" y="338" class="lbl-soft" text-anchor="middle">45°</text>
+        <text x="450" y="338" class="lbl-soft" text-anchor="middle">90°</text>
+        <text x="635" y="338" class="lbl-soft" text-anchor="middle">135°</text>
+        <text x="820" y="338" class="lbl-soft" text-anchor="middle">180°</text>
+        <text x="450" y="358" class="lbl">DIAL DIFFERENCE</text>
+
+        <!-- Quantum/experimental curve in blue (same as ch1 fig 1.4) -->
+        <path d="M 80 320 C 200 314 280 280 360 240 C 460 192 540 140 820 100" stroke="#2347d9" fill="none" stroke-width="2.4"/>
+        <text x="200" y="280" class="lbl" style="fill:#2347d9;">EXPERIMENT (QM)</text>
+
+        <!-- Hidden-variable straight line in red -->
+        <line x1="80" y1="320" x2="820" y2="100" stroke="#c64545" stroke-width="2.4" stroke-dasharray="5 4"/>
+        <text x="600" y="190" class="lbl" style="fill:#c64545;">GLOVE / SECRET-TAG (LINE)</text>
+
+        <!-- agreement points highlighted -->
+        <circle cx="80" cy="320" r="6" fill="#2f8f5b"/>
+        <circle cx="450" cy="210" r="6" fill="#2f8f5b"/>
+        <circle cx="820" cy="100" r="6" fill="#2f8f5b"/>
+        <text x="84" y="310" class="lbl-soft" style="fill:#2f8f5b;">agree at 0°</text>
+        <text x="450" y="200" class="lbl-soft" style="fill:#2f8f5b;" text-anchor="middle">agree at 90°</text>
+        <text x="816" y="92" class="lbl-soft" style="fill:#2f8f5b;" text-anchor="end">agree at 180°</text>
+
+        <!-- gap arrows showing where they disagree -->
+        <line x1="265" y1="265" x2="265" y2="247" stroke="#c64545" stroke-width="1" stroke-dasharray="2 2"/>
+        <text x="276" y="256" class="lbl-soft" style="fill:#c64545;">gap here</text>
+
+        <text x="24" y="370" class="lbl-soft">FIG. 2.3 · LINE VS CURVE</text>
+      </svg>
+      <figcaption><span class="figno">FIG. 2.3</span> The "secret tag" theory gives a straight line. The actual experiment gives a curve. They cross at three points (0°, 90°, 180°) — but everywhere else, they disagree. <strong>This is the gap Bell will exploit.</strong></figcaption>
+    </figure>
+
+    <p>
+      So the simple secret-tag model isn't quite right — it gets three points and misses the rest. You might object: "okay, that <em>specific</em> hidden-variable rule isn't right, but maybe a cleverer one is." That's exactly Bell's question. He shows that <strong>no matter how clever the rule</strong>, no local hidden-variable theory can produce the curve. There is something the curve is doing that no straight-line, sealed-envelope explanation can match.
+    </p>
+
+    <div class="callout">
+      <span class="tag">Why this matters</span>
+      <p>
+        It's tempting to read the gap in the picture above and think "well, maybe a different hidden-variable model would give a curvier line." Bell's contribution was to prove there is a <em>universal</em> upper bound on how curvy any local hidden-variable line can be — and the experimental curve sits well above that bound. No clever construction can fix it. That proof is chapter 3.
+      </p>
+    </div>
+
+
+    <div class="pagenav">
+      <a href="chapter-1.html">← Previous<span class="nm">1 · The puzzle</span></a>
+      <a href="chapter-3.html">Next →<span class="nm">3 · The clever experiment</span></a>
+    </div>
+
+  </article>
+
+  <div class="margin-tag">
+    <span class="top">ON THE EINSTEIN PODOLSKY ROSEN PARADOX</span>
+    <span class="mid">CHAPTER 2 · GLOVE ANALOGY</span>
+    <span class="bot">FIG. 2.1 — 2.3</span>
+  </div>
+
+</main>
+
+</body>
+</html>
